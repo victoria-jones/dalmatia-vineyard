@@ -1,0 +1,32 @@
+/*
+    - current page is marked by link having an underline and diamond underneath it
+    - when hoving other links the diamond moves to that link (fluid movement, it does not fade away or in)
+    - when selecting a link the bar moves to the selected page
+    - when there is no hover the diamond and bar remain on the current page
+*/
+
+.website-navigation {
+
+    &__list {
+        list-style-type: none;
+        text-align: center;
+        display: flex;
+    }
+    &__list-item {
+        &:not(last-child) {
+            margin-right: 5rem;
+        }
+    }
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-transform: lowercase;
+        }
+
+        &:hover,
+        &:active {
+            
+        }
+    }
+}

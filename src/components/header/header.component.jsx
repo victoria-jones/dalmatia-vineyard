@@ -5,6 +5,7 @@ import WebsiteNavigation from '../website-navigation/website-navigation.componen
 
 const Header = () => (
     <header className="header">
+        <span className="pre-header-font">test pre-header</span>
         <h1>Dalmatia Vineyard Estate</h1>
         <WebsiteNavigation />
     </header>

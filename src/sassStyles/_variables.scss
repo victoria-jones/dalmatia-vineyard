@@ -10,9 +10,12 @@ $color-secondary-red-dark: #670000;
 $color-secoondary-red-med: #860706;
 
 //FONTS
-$font-body: serif;
-$font-display: sans-serif;
-$font-display-secondary: cursive;
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Raleway&family=Sorts+Mill+Goudy&family=Tangerine&display=swap');
+
+$font-body: 'Sorts Mill Goudy', serif;
+$font-display: 'Raleway', sans-serif;
+$font-display-secondary: 'Tangerine', cursive;
+$font-logo: 'IM Fell English', serif;
 
 
 //FONT SIZING

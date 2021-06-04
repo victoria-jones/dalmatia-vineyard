@@ -8,12 +8,64 @@
 
 @import './sassStyles/main.scss';
 
+/*************** 
+  GLOBAL
+
+  sizing conventions used: 
+  REM & EM 
+  1 rem = 10px
+  1 em = 16px
+***************/ 
+
+//resets and definitions for site wide sizing conventions
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //rem definition
+  font-size: 62.5%; //1 rem = 10px --> 10px/16-x = 62.5%
+
+  
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem = 12px
+  }
+  
+}
+
+body {
+  box-sizing: border-box;
+}
+
+
+/*************** 
+  TYPOGRAPHY
+***************/ 
+
 body {
   font-family: $font-body;
+  font-size: 1.6rem;
 }
 
 h1, h2, h3, h4 {
   font-family: $font-display;
+  text-transform: uppercase;
+}
+
+.pre-header-font {
+  font-family: $font-display-secondary;
+  text-transform: lowercase;
+  font-size: 4rem;
 }
 
 .App {
