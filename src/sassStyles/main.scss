@@ -1,0 +1,6 @@
+//compile all scss styles here so only one file needs to be loaded into component scss files
+
+@import 'animations';
+@import 'functions';
+@import 'mixins';
+@import 'variables';
