@@ -1,3 +1,5 @@
+@import '../../sassStyles/main.scss';
+
 /*
     - current page is marked by link having an underline and diamond underneath it
     - when hoving other links the diamond moves to that link (fluid movement, it does not fade away or in)
@@ -6,11 +8,13 @@
 */
 
 .website-navigation {
+    width: 100%;
 
     &__list {
         list-style-type: none;
         text-align: center;
         display: flex;
+        width: 100%;
     }
     &__list-item {
         &:not(last-child) {
@@ -24,9 +28,27 @@
             text-transform: lowercase;
         }
 
-        &:hover,
+        /*&:hover,
         &:active {
             
-        }
+        }*/
+    }
+
+    &__underline {
+        width: .3rem;
+        height: .3rem;
+        background-color: $color-primary-red;
+    }
+
+    &__diamond {
+        font-size: 2rem;
+        color: $color-primary-red;
+        //text-align: left;
+    }
+
+    &__underline,
+    &__diamond {
+        position: relative;
+        transition: all ease-in-out .5s;
     }
 }
