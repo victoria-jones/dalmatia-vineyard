@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './website-navigation.styles.scss';
 
-const WebsiteNavigation = () => {
+const WebsiteNavigation = ({ logoSize }) => {
     const location = useLocation();
+
     const [currentLocation, setCurrentLocation ] = useState("/");
     const [linkUnderlineOffset, setLinkUnderlineOffset] = useState();
     const [linkUnderlineWidth, setLinkUnderlineWidth] = useState();
@@ -21,7 +22,10 @@ const WebsiteNavigation = () => {
     useEffect(() => {
         //set location and size of link underline
         const linkWidth = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetWidth;
-        const leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
+        let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
+        //remove the size of the header logo from the offset
+        leftOffset -= logoSize;
+
         setLinkUnderlineOffset(leftOffset);
         setLinkUnderlineWidth(linkWidth);
 
@@ -33,10 +37,12 @@ const WebsiteNavigation = () => {
     /*console.log(`current location: ${currentLocation}`);
     console.log(`link underline offset: ${linkUnderlineOffset}`);
     console.log(`link width: ${linkUnderlineWidth}`);*/
+    console.log(logoSize);
 
     const moveDiamond = (target) => {
-        const mouseLocation = target.parentNode.offsetLeft;
+        let mouseLocation = target.parentNode.offsetLeft;
         const locationElementWidth = target.parentNode.offsetWidth;
+        mouseLocation -= logoSize;
         setDiamondLocation(mouseLocation);
         setDiamondWidth(locationElementWidth);
     };
