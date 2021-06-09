@@ -32,12 +32,11 @@ const WebsiteNavigation = ({ logoSize }) => {
         //set starting location of diamond
         setDiamondLocation(leftOffset);
         setDiamondWidth(linkWidth);
-    }, [currentLocation]);
+    }, [currentLocation, logoSize]);
 
     /*console.log(`current location: ${currentLocation}`);
     console.log(`link underline offset: ${linkUnderlineOffset}`);
     console.log(`link width: ${linkUnderlineWidth}`);*/
-    console.log(logoSize);
 
     const moveDiamond = (target) => {
         let mouseLocation = target.parentNode.offsetLeft;

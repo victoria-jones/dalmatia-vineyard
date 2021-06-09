@@ -1,0 +1,21 @@
+@import '../../sassStyles/main.scss';
+
+.custom-button {
+    font-family: $font-display-secondary;
+    font-size: 4rem;
+    padding: -1rem 2rem 2rem 2rem;
+
+    &::after {
+        position: relative;
+        //background-color: orange;
+    }
+
+    &__red {
+        color: $color-white;
+    }
+
+    &__white {
+        color: $color-primary-red;
+        background-color: orange;
+    }
+}

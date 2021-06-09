@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import  CustomButton  from '../custom-button/custom-button.component';
 
 import './header.styles.scss';
 
@@ -8,16 +9,17 @@ const Header = () => {
     const [logoSize, setLogoSize] = useState();
 
     useEffect(() => {
-        const logoWidth = document.querySelector(".header-logo").offsetWidth;
+        const logoWidth = document.querySelector(".header__logo").offsetWidth;
         setLogoSize(logoWidth);
     },[]);
 
-    console.log(logoSize);
-
     return(
         <header className="header">
-            <div className="header-logo">header logo placeholder</div>
+            <div className="header__logo">header logo placeholder</div>
             <WebsiteNavigation logoSize={logoSize} />
+            <CustomButton white>
+                booking
+            </CustomButton>
         </header>
     );
 };
