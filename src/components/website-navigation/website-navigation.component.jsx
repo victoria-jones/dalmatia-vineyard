@@ -5,30 +5,34 @@ import './website-navigation.styles.scss';
 
 const WebsiteNavigation = () => {
     const location = useLocation();
-    const [currentLocation, setCurrentLocation ] = useState();
+    const [currentLocation, setCurrentLocation ] = useState("/");
     const [linkUnderlineOffset, setLinkUnderlineOffset] = useState();
     const [linkUnderlineWidth, setLinkUnderlineWidth] = useState();
     const [diamondLocation, setDiamondLocation] = useState();
     const [diamondWidth, setDiamondWidth] = useState();
 
+    //check for react router for current location
     useEffect(() => {
         //set current page path
         setCurrentLocation(location.pathname);
+    }, [location]);
 
+    //update link underline and diamond after currentLocation is set
+    useEffect(() => {
         //set location and size of link underline
-        const linkWidth = document.querySelector(`a[href="${location.pathname}"]`).parentNode.offsetWidth;
-        const leftOffset = document.querySelector(`a[href="${location.pathname}"]`).parentNode.offsetLeft;
+        const linkWidth = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetWidth;
+        const leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
         setLinkUnderlineOffset(leftOffset);
         setLinkUnderlineWidth(linkWidth);
 
         //set starting location of diamond
         setDiamondLocation(leftOffset);
         setDiamondWidth(linkWidth);
-    }, [location]);
+    }, [currentLocation]);
 
-    /*console.log(currentLocation);
-    console.log(linkUnderlineOffset);
-    console.log(linkUnderlineWidth);*/
+    /*console.log(`current location: ${currentLocation}`);
+    console.log(`link underline offset: ${linkUnderlineOffset}`);
+    console.log(`link width: ${linkUnderlineWidth}`);*/
 
     const moveDiamond = (target) => {
         const mouseLocation = target.parentNode.offsetLeft;
