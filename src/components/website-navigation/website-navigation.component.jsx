@@ -20,22 +20,27 @@ const WebsiteNavigation = ({ logoSize }) => {
 
     //update link underline and diamond after currentLocation is set
     useEffect(() => {
-        //set location and size of link underline
-        const linkWidth = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetWidth;
-        let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
-        //remove the size of the header logo from the offset
-        leftOffset -= logoSize;
+        //do not run this if there is no link connected to the currentLocation
+        if(document.querySelector(`a[href="${currentLocation}"]`)) {
+            //set location and size of link underline
+            const linkWidth = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetWidth;
+            let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
+            
+            //remove the size of the header logo from the offset
+            leftOffset -= logoSize;
 
-        setLinkUnderlineOffset(leftOffset);
-        setLinkUnderlineWidth(linkWidth);
+            setLinkUnderlineOffset(leftOffset);
+            setLinkUnderlineWidth(linkWidth);
 
-        //set starting location of diamond
-        setDiamondLocation(leftOffset);
-        setDiamondWidth(linkWidth);
+            //set starting location of diamond
+            setDiamondLocation(leftOffset);
+            setDiamondWidth(linkWidth);
+        }
+        
     }, [currentLocation, logoSize]);
 
-    /*console.log(`current location: ${currentLocation}`);
-    console.log(`link underline offset: ${linkUnderlineOffset}`);
+    console.log(`current location: ${currentLocation}`);
+    /*console.log(`link underline offset: ${linkUnderlineOffset}`);
     console.log(`link width: ${linkUnderlineWidth}`);*/
 
     const moveDiamond = (target) => {

@@ -17,9 +17,7 @@ const Header = () => {
         <header className="header">
             <div className="header__logo">header logo placeholder</div>
             <WebsiteNavigation logoSize={logoSize} />
-            <CustomButton white>
-                booking
-            </CustomButton>
+            <CustomButton white>booking</CustomButton>
         </header>
     );
 };
