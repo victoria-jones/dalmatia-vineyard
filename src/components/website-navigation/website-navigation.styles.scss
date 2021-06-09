@@ -1,12 +1,5 @@
 @import '../../sassStyles/main.scss';
 
-/*
-    - current page is marked by link having an underline and diamond underneath it
-    - when hoving other links the diamond moves to that link (fluid movement, it does not fade away or in)
-    - when selecting a link the bar moves to the selected page
-    - when there is no hover the diamond and bar remain on the current page
-*/
-
 .website-navigation {
     width: 100%;
 
@@ -26,12 +19,14 @@
         &:visited {
             text-decoration: none;
             text-transform: lowercase;
+            //color: $color-white;
         }
 
-        /*&:hover,
+        &:hover,
         &:active {
-            
-        }*/
+            color: $color-primary-red;
+            transition: all .5s;
+        }
     }
 
     &__underline {
@@ -43,7 +38,6 @@
     &__diamond {
         font-size: 2rem;
         color: $color-primary-red;
-        //text-align: left;
     }
 
     &__underline,
@@ -51,4 +45,5 @@
         position: relative;
         transition: all ease-in-out .5s;
     }
+
 }
