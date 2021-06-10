@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './website-navigation.styles.scss';
 
-const WebsiteNavigation = ({ logoSize }) => {
+const WebsiteNavigation = ({ logoSize, navClass }) => {
     const location = useLocation();
 
     const [currentLocation, setCurrentLocation ] = useState("/");
@@ -27,7 +27,7 @@ const WebsiteNavigation = ({ logoSize }) => {
             let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
             
             //remove the size of the header logo from the offset
-            //leftOffset -= logoSize;
+            leftOffset -= logoSize;
 
             setLinkUnderlineOffset(leftOffset);
             setLinkUnderlineWidth(linkWidth);
@@ -46,14 +46,14 @@ const WebsiteNavigation = ({ logoSize }) => {
     const moveDiamond = (target) => {
         let mouseLocation = target.parentNode.offsetLeft;
         const locationElementWidth = target.parentNode.offsetWidth;
-        //mouseLocation -= logoSize;
+        mouseLocation -= logoSize;
         setDiamondLocation(mouseLocation);
         setDiamondWidth(locationElementWidth);
     };
 
 
     return (
-        <nav className="website-naviation">
+        <nav className={`website-navigation ${navClass ? navClass : ''}`}>
             <ul className="website-navigation__list">
                 <li className="website-navigation__list-item" 
                     onMouseOver={(e) => moveDiamond(e.target)} 

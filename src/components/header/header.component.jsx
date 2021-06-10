@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+
 import  CustomButton  from '../custom-button/custom-button.component';
+import Logo from '../logo/logo.component';
 
 import './header.styles.scss';
 
@@ -15,9 +17,9 @@ const Header = () => {
 
     return(
         <header className="header">
-            <div className="header__logo">header logo placeholder</div>
-            <WebsiteNavigation logoSize={logoSize} />
-            <CustomButton white>booking</CustomButton>
+            <Logo logoClass="header__logo"/>
+            <WebsiteNavigation logoSize={logoSize} navClass="header__nav" />
+            <CustomButton white link="contact" buttonClass="header__button">booking</CustomButton>
         </header>
     );
 };

@@ -1,6 +1,13 @@
 @import '../../sassStyles/main.scss';
 
 .header {
-    //display: flex;
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &__nav {
+        //remove the space that the underline and diamond add
+        margin-top: 2.3rem;
+    }    
 }
