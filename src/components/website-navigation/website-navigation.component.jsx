@@ -27,7 +27,7 @@ const WebsiteNavigation = ({ logoSize }) => {
             let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
             
             //remove the size of the header logo from the offset
-            leftOffset -= logoSize;
+            //leftOffset -= logoSize;
 
             setLinkUnderlineOffset(leftOffset);
             setLinkUnderlineWidth(linkWidth);
@@ -39,14 +39,14 @@ const WebsiteNavigation = ({ logoSize }) => {
         
     }, [currentLocation, logoSize]);
 
-    console.log(`current location: ${currentLocation}`);
-    /*console.log(`link underline offset: ${linkUnderlineOffset}`);
+    /*console.log(`current location: ${currentLocation}`);
+    console.log(`link underline offset: ${linkUnderlineOffset}`);
     console.log(`link width: ${linkUnderlineWidth}`);*/
 
     const moveDiamond = (target) => {
         let mouseLocation = target.parentNode.offsetLeft;
         const locationElementWidth = target.parentNode.offsetWidth;
-        mouseLocation -= logoSize;
+        //mouseLocation -= logoSize;
         setDiamondLocation(mouseLocation);
         setDiamondWidth(locationElementWidth);
     };

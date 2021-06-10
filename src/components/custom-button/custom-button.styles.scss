@@ -1,21 +1,80 @@
 @import '../../sassStyles/main.scss';
 
 .custom-button {
-    font-family: $font-display-secondary;
-    font-size: 4rem;
-    padding: -1rem 2rem 2rem 2rem;
+    &--wrapper {
+        display: inline-block;
+        padding: .3rem .8rem;
 
-    &::after {
-        position: relative;
-        //background-color: orange;
+        &--white {
+            border: .3rem solid $color-white;
+        }
+        &--red {
+            border: .3rem solid $color-primary-red; 
+        }
+
+        &:hover {
+            cursor: pointer;  
+        }
     }
 
-    &__red {
+    position: relative;
+    font-family: $font-display-secondary;
+    font-size: 3.5rem;
+    padding: 0 3rem 0rem 3rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $color-white;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+        top: 10%;
+        right: 0;
+
+        
+    }
+
+    &--red {
         color: $color-white;
     }
 
-    &__white {
+    &--white {
         color: $color-primary-red;
-        background-color: orange;
+    }
+
+}
+
+//shadow and hover effects
+.custom-button--wrapper {
+    .custom-button {
+        &::after {
+            transition: all .3s;
+            @include primary-box-shadow;
+        }
+    }
+    &:hover {
+        .custom-button {
+            &--white{
+                &::after {
+                    @include primary-box-shadow-hover(red);
+                }
+            }
+            &--red {
+                &::after {
+                    @include primary-box-shadow-hover(white); 
+                }
+            }
+        }
+    }
+    &:active {
+        .custom-button {
+            &--white,
+            &--red {
+                &::after {
+                    @include primary-box-shadow-pressed(red);
+                }
+            }
+        }
     }
 }
