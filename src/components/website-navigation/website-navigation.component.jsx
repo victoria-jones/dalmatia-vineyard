@@ -25,9 +25,11 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
             //set location and size of link underline
             const linkWidth = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetWidth;
             let leftOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.offsetLeft;
+            const parentOffset = document.querySelector(`a[href="${currentLocation}"]`).parentNode.parentNode.parentNode.offsetLeft;
             
-            //remove the size of the header logo from the offset
+            //remove the size of the header logo from the offset and nav margin
             leftOffset -= logoSize;
+            leftOffset -= parentOffset/5; //why its divide by five i don't really know but it worked :/
 
             setLinkUnderlineOffset(leftOffset);
             setLinkUnderlineWidth(linkWidth);
@@ -35,6 +37,8 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
             //set starting location of diamond
             setDiamondLocation(leftOffset);
             setDiamondWidth(linkWidth);
+
+            console.log(parentOffset);
         }
         
     }, [currentLocation, logoSize]);
@@ -46,7 +50,9 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
     const moveDiamond = (target) => {
         let mouseLocation = target.parentNode.offsetLeft;
         const locationElementWidth = target.parentNode.offsetWidth;
+        const parentOffset = target.parentNode.parentNode.parentNode.offsetLeft;
         mouseLocation -= logoSize;
+        mouseLocation -= parentOffset/5;
         setDiamondLocation(mouseLocation);
         setDiamondWidth(locationElementWidth);
     };
