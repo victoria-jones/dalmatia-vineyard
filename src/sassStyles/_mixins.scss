@@ -23,16 +23,16 @@
 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media only screen and (max-width 37.5em) { @content }; //600px
+        @media only screen and (max-width: 37.5em) { @content }; //600px
     }
     @if $breakpoint == tab-port {
-        @media only screen and (max-width 56.25em) { @content }; //900px
+        @media only screen and (max-width: 56.25em) { @content }; //900px
     }
     @if $breakpoint == tab-land {
-        @media only screen and (max-width 75em) { @content }; //1200px
+        @media only screen and (max-width: 75em) { @content }; //1200px
     }
     @if $breakpoint == big-desktop {
-        @media only screen and (max-width 112.5em) { @content }; //1800px
+        @media only screen and (max-width: 112.5em) { @content }; //1800px
     }
 }
 
@@ -73,3 +73,25 @@ $color:
     
 }
 
+/**************
+
+borders 
+
+**************/
+
+@mixin borderStyle {
+    border: .3rem solid $color-white;
+}
+
+
+/**************
+
+beziers
+
+$transitionProperty = element to transition (ie: transform, all, scale, etc.)
+
+**************/
+
+@mixin imageHolderTransition($transitionProperty) {
+    transition: $transitionProperty 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}

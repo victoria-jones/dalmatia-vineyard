@@ -1,7 +1,8 @@
 /*Global website styles*/
 /*
-  typography
+  css reset
   global styles
+  typography
 
   this styles are applied to the overall website app
 */
@@ -31,7 +32,7 @@ html {
   font-size: 62.5%; //1 rem = 10px --> 10px/16-x = 62.5%
 
   
-  @include respond(tab-land) {
+  /*@include respond(tab-land) {
     font-size: 56.25%; //1 rem = 9px
   }
   @include respond(tab-port) {
@@ -39,7 +40,7 @@ html {
   }
   @include respond(big-desktop) {
     font-size: 75%; //1 rem = 12px
-  }
+  }*/
   
 }
 
@@ -64,10 +65,24 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
+.logo-font {
+  font-family: $font-logo;
+  font-size: 6rem;
+  text-transform: none;
+}
+
+.header-font {
+  font-size: 3rem;
+}
+
 .pre-header-font {
   font-family: $font-display-secondary;
   text-transform: lowercase;
   font-size: 4rem;
+}
+
+.cta-font {
+  font-size: 2rem;
 }
 
 .App {

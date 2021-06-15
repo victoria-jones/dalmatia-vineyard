@@ -1,0 +1,44 @@
+@import '../../sassStyles/main.scss';
+
+.imageBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    & > * {
+        position: absolute;
+    }
+
+    &__content {
+        z-index: 2;
+    }
+
+    &__border {
+        z-index: 1;
+        width: 93%;
+        height: 90%;
+        @include borderStyle;
+    }
+
+    &__image-holder {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:hover {
+        .imageBox__image-holder {
+            transform: scale(1.1);
+            @include imageHolderTransition(transform);
+        }
+    }
+
+
+}
