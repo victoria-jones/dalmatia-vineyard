@@ -6,10 +6,10 @@
         padding: .3rem .8rem;
 
         &--white {
-            border: .3rem solid $color-white;
+            @include borderStyle(white);
         }
         &--red {
-            border: .3rem solid $color-primary-red; 
+            @include borderStyle(red);
         }
 
         &:hover {

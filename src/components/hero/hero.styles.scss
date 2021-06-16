@@ -1,10 +1,60 @@
-.hero {
+.hero { 
+    width: 100%;
+    height: 100%;
 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr) .7fr;
+    gap: 1rem 1rem;
+    grid-template-areas:
+        "carousel carousel carousel carousel highlight-1 highlight-1"
+        "carousel carousel carousel carousel highlight-2 highlight-2"
+        "carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight";
+
+
+    &__carousel {
+        grid-area: carousel;
+
+        width: 100%;
+        height: 60rem;
+        background-color: orange;
+
+        &--container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+    }
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        &--text {
+            margin-bottom: 2rem;
+        }
+    }
 
     &__highlight {
-        width: 40rem;
-        height: 30rem;
+        //width: 40rem;
+        //height: 30rem;
+        width: 100%;
+        height: 100%;
         background-color: grey;
         margin-bottom: 2rem;
+
+        &--weddings {
+            grid-area: highlight-1;
+        }
+        &--event-planning {
+            grid-area: highlight-2;
+        }
     }
+
+    &__carousel-highlights {
+        grid-area: carousel-highlight;
+    }
+
 }

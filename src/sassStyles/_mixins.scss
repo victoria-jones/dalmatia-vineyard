@@ -77,10 +77,17 @@ $color:
 
 borders 
 
+$color = color the border will be
+
 **************/
 
-@mixin borderStyle {
-    border: .3rem solid $color-white;
+@mixin borderStyle($color) {
+    @if $color == red {
+        border: .3rem solid $color-primary-red;
+    }
+    @if $color == white {
+        border: .3rem solid $color-white;
+    }
 }
 
 
