@@ -2,8 +2,10 @@ import React from 'react';
 
 import './image-box-bordered.styles.scss';
 
-const ImageBoxBordered = ({ children, backgroundImage }) => (
-    <div className="imageBox">
+const ImageBoxBordered = ({ children, backgroundImage, imageBoxClass }) => (
+    <div className={`imageBox  
+                    ${imageBoxClass ? imageBoxClass : ''}
+    `}>
         <div className="imageBox__content">
            {children} 
         </div>

@@ -1,0 +1,54 @@
+@import '../../sassStyles/main.scss';
+
+.carousel {
+    position: relative;
+
+    &--wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    &__images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        //width: 400%;
+        height: 100%;
+
+        display: flex;
+    }
+
+    &__location-marker {
+        display: flex;
+        position: relative;
+        z-index: 0;
+
+        &--diamond-highlight {
+            position: absolute;
+            top: -1.2rem;
+            left: -.8rem;
+            color: transparent;
+            font-size: 3.5rem;
+            -webkit-text-stroke: .3rem $color-primary-red;
+            z-index: -1;
+        }
+
+        &--diamond {
+            color: $color-white;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
