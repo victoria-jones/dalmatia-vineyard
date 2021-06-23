@@ -41,5 +41,12 @@
         }
     }
 
+    &--transparent {
+        .imageBox__image-holder {
+            opacity: .7;
+            filter: blur(.1rem);
+        }
+    }
+
 
 }

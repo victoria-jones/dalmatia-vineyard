@@ -102,3 +102,27 @@ $transitionProperty = element to transition (ie: transform, all, scale, etc.)
 @mixin imageHolderTransition($transitionProperty) {
     transition: $transitionProperty 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 }
+
+
+/****************
+    mixins to include webkits
+
+
+animation:
+    - $name = animation-name
+    - $duration = animation-duration
+    - $timing = animation-timing
+
+****************/
+
+@mixin animation($name, $duration, $timing) {
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    -moz-animation-name: $name;
+    -moz-animation-duration: $duration;
+    -moz-animation-timing-function: $timing;
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+}

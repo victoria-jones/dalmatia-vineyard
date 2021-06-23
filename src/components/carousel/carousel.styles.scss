@@ -18,11 +18,30 @@
         top: 0;
         left: 0;
         z-index: -1;
+        background-color: $color-primary-red;
 
         //width: 400%;
         height: 100%;
+        width: 100%;
 
-        display: flex;
+        //display: flex;
+    }
+
+    &__image {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        /*-webkit-animation-name: fade;
+        -webkit-animation-duration: 2.5s;
+        -moz-animation-name: fade;
+        -moz-animation-duration: 2.5s;
+        animation-name: fade;
+        animation-duration: 2.5s;
+        */
+
+        @include animation(fade, 2.5s, $cubic-bezier);
     }
 
     &__location-marker {
