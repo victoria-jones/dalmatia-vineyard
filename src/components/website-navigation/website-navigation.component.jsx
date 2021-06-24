@@ -7,10 +7,10 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
     const location = useLocation();
 
     const [currentLocation, setCurrentLocation ] = useState("/");
-    const [linkUnderlineOffset, setLinkUnderlineOffset] = useState();
-    const [linkUnderlineWidth, setLinkUnderlineWidth] = useState();
-    const [diamondLocation, setDiamondLocation] = useState();
-    const [diamondWidth, setDiamondWidth] = useState();
+    const [linkUnderlineOffset, setLinkUnderlineOffset] = useState(0);
+    const [linkUnderlineWidth, setLinkUnderlineWidth] = useState(0);
+    const [diamondLocation, setDiamondLocation] = useState(0);
+    const [diamondWidth, setDiamondWidth] = useState(0);
 
     //check for react router for current location
     useEffect(() => {
@@ -37,8 +37,6 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
             //set starting location of diamond
             setDiamondLocation(leftOffset);
             setDiamondWidth(linkWidth);
-
-            console.log(parentOffset);
         }
         
     }, [currentLocation, logoSize]);

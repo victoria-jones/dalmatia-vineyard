@@ -14,8 +14,9 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
         //map images to ImageBorderBox objs
     //(optional) take children to fill inside carousel. (on top of images)
 
+    //start the carousel
     useEffect(() => {
-        //autoCarousel(carouselCount);
+        let mounted = true;
         const carouselImageDivs = document.getElementsByClassName('carousel__image');
         if(carouselCount > carouselImageDivs.length-1) {
             return setCarouselCount(0);
@@ -28,27 +29,59 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
             carouselImageDivs[i].style.display = "none";
         }
         carouselImageDivs[carouselCount].style.display = "flex";
-        
 
+        //change the carousel marker location
+        const carouselDiamonds = document.getElementsByClassName("carousel__location-marker--diamond");
+        setCarouselMarkerLocation(carouselDiamonds[carouselCount].offsetLeft);
+        
+        //carousel timer
+        if(mounted) {
+            setTimeout(() => {
+                setCarouselCount(carouselCount+1);
+            }, 5000);
+        }
+
+        return () => { mounted = false; }
+    }, [carouselCount]);
+
+    //set Carousel marker location
+    useEffect(() => {
+        let carouselMarker = document.getElementsByClassName("carousel__location-marker--diamond-highlight")[0];
+        const markerMovement = (carouselMarkerLocation - 8)/10;
+
+        carouselMarker.style.left = `${markerMovement}rem`;
+    }, [carouselMarkerLocation]);
+
+    //carousel functionality
+    /*const runCarousel = () => {
+        const carouselImageDivs = document.getElementsByClassName('carousel__image');
+        if(carouselCount > carouselImageDivs.length-1) {
+            return setCarouselCount(0);
+        } else if (carouselCount < 0) {
+            return setCarouselCount(carouselImageDivs.length-1);
+        }
+
+        //set display of current carousel point and hide others
+        for(let i = 0; i < carouselImageDivs.length; i++) {
+            carouselImageDivs[i].style.display = "none";
+        }
+        carouselImageDivs[carouselCount].style.display = "flex";
+
+        //change the carousel marker location
+        const carouselDiamonds = document.getElementsByClassName("carousel__location-marker--diamond");
+        setCarouselMarkerLocation(carouselDiamonds[carouselCount].offsetLeft);
+        
         //carousel timer
         setTimeout(() => {
-            changeCarouselImage(carouselCount);
+            setCarouselCount(carouselCount+1);
         }, 5000);
-    },[carouselCount]);
+    }*/
 
-    const autoCarousel = (currentCarouselCount) => {
-        //carousel starting point
-        
-    }
-
-    const changeCarouselImage = (currentCarouselCount) => {
-        setCarouselCount(carouselCount+1);
-    }
-
-    const moveCarouselMarker = (target) => {
-        const selectedImageOffset = target.offsetLeft;
-        const carouselMarker = document.getElementsByClassName['carousel__location-marker--diamond-highlight'];
-        console.log(target.offsetLeft);
+    //set marker location when user clicks the diamond
+    const moveCarouselPosition = (target) => {
+        const diamondParent = target.parentNode;
+        const diamondPosition = (Array.from(diamondParent.children).indexOf(target)) - 1;
+        console.log(`move carousel position to: ${diamondPosition}`);
     }
 
     return(
@@ -61,9 +94,9 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
                     <div className="carousel__location-marker--diamond-highlight">&#9670;</div>
                     {carouselImages.map(image => 
                         <div 
-                            className="carousel__location-marker--diamond" 
+                            className={`carousel__location-marker--daimond--0${carouselImages.indexOf(image)} carousel__location-marker--diamond`}
                             key={carouselImages.indexOf(image)}
-                            onClick={(e) => moveCarouselMarker(e.target)}
+                            onClick={(e) => moveCarouselPosition(e.target)} 
                         >
                             &#9670;
                         </div>
