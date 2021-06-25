@@ -9,6 +9,7 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
     //const [carouselImages, setCarouselImages] = useState([]);
     const [carouselCount, setCarouselCount] = useState(0);
     const [carouselMarkerLocation, setCarouselMarkerLocation] = useState();
+    const [runCarousel, setRunCarousel] = useState(true);
 
     //take images as props
         //map images to ImageBorderBox objs
@@ -16,14 +17,28 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
 
     //start the carousel
     useEffect(() => {
-        let mounted = true;
+        let carouselTimeout;
         const carouselImageDivs = document.getElementsByClassName('carousel__image');
+
+        if(runCarousel) {
+            carouselTimeout = setTimeout(() => {
+                setCarouselCount(carouselCount+1);
+            }, 1000);
+        }
+        
+            /*const autoMoveCarousel = () => {
+                setTimeout(() => {
+                    setCarouselCount(carouselCount+1);
+                }, 5000); 
+            }*/
+
+            
         if(carouselCount > carouselImageDivs.length-1) {
             return setCarouselCount(0);
         } else if (carouselCount < 0) {
             return setCarouselCount(carouselImageDivs.length-1);
         }
-
+   
         //set display of current carousel point and hide others
         for(let i = 0; i < carouselImageDivs.length; i++) {
             carouselImageDivs[i].style.display = "none";
@@ -35,14 +50,21 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
         setCarouselMarkerLocation(carouselDiamonds[carouselCount].offsetLeft);
         
         //carousel timer
-        if(mounted) {
-            setTimeout(() => {
-                setCarouselCount(carouselCount+1);
-            }, 5000);
-        }
+        /*setTimeout(() => {
+            setCarouselCount(carouselCount+1);
+        }, 5000);*/ 
 
-        return () => { mounted = false; }
-    }, [carouselCount]);
+        //autoMoveCarousel();
+
+        //cleanup 
+        /*
+            currently the bc of how this is setup, the carousel will stop moving when it hits 0 again
+            how do it get it moving?
+        */
+        return () => clearTimeout(carouselTimeout);
+        
+
+    }, [carouselCount, runCarousel]);
 
     //set Carousel marker location
     useEffect(() => {
@@ -51,6 +73,8 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
 
         carouselMarker.style.left = `${markerMovement}rem`;
     }, [carouselMarkerLocation]);
+
+    
 
     //carousel functionality
     /*const runCarousel = () => {
@@ -82,6 +106,10 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
         const diamondParent = target.parentNode;
         const diamondPosition = (Array.from(diamondParent.children).indexOf(target)) - 1;
         console.log(`move carousel position to: ${diamondPosition}`);
+
+        //setCarouselMarkerLocation(diamondPosition);
+        setCarouselCount(diamondPosition);
+        setRunCarousel(false);
     }
 
     return(

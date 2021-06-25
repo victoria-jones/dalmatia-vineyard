@@ -62,6 +62,7 @@
         }
 
         &--diamond {
+            transition: all ease-in-out .5s;
             color: $color-white;
             &:not(:last-child) {
                 margin-right: 2rem;
@@ -69,6 +70,7 @@
 
             &:hover {
                 cursor: pointer;
+                color: $color-primary-red;
             }
         }
     }

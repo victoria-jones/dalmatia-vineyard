@@ -12,7 +12,7 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
     const [diamondLocation, setDiamondLocation] = useState(0);
     const [diamondWidth, setDiamondWidth] = useState(0);
 
-    //check for react router for current location
+    //check react router for current location
     useEffect(() => {
         //set current page path
         setCurrentLocation(location.pathname);
