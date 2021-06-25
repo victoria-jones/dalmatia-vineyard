@@ -25,14 +25,7 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
                 setCarouselCount(carouselCount+1);
             }, 1000);
         }
-        
-            /*const autoMoveCarousel = () => {
-                setTimeout(() => {
-                    setCarouselCount(carouselCount+1);
-                }, 5000); 
-            }*/
-
-            
+      
         if(carouselCount > carouselImageDivs.length-1) {
             return setCarouselCount(0);
         } else if (carouselCount < 0) {
@@ -53,8 +46,6 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
         /*setTimeout(() => {
             setCarouselCount(carouselCount+1);
         }, 5000);*/ 
-
-        //autoMoveCarousel();
 
         //cleanup 
         /*
