@@ -3,6 +3,7 @@ import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import ImageBoxBordered from '../image-box-bordered/image-box-bordered.component';
 import Carousel from '../carousel/carousel.component';
+import DesignedLink from '../designed-link/designed-link.component';
 
 import './hero.styles.scss';
 
@@ -55,21 +56,29 @@ const Hero = () => {
             </div>
 
             <div className="hero__carousel-highlights">
-                <div className="hero__carousel-highlights hero__carousel-highlights--1">
-                    highlight 1
-                </div>
+                <DesignedLink 
+                    linkClass="hero__carousel-highlights hero__carousel-highlights--1"
+                    subtitle="special"
+                    title="events" 
+                />
 
-                <div className="hero__carousel-highlights hero__carousel-highlights--2">
-                    highlight 2
-                </div>
+                <DesignedLink 
+                    linkClass="hero__carousel-highlights hero__carousel-highlights--2"
+                    subtitle="personalized"
+                    title="wine bottles" 
+                />
 
-                <div className="hero__carousel-highlights hero__carousel-highlights--3">
-                    highlight 3
-                </div>
+                <DesignedLink 
+                    linkClass="hero__carousel-highlights hero__carousel-highlights--3"
+                    subtitle="all inclusive"
+                    title="event planning" 
+                />
 
-                <div className="hero__carousel-highlights hero__carousel-highlights--4">
-                    highlight 4
-                </div>
+                <DesignedLink 
+                    linkClass="hero__carousel-highlights hero__carousel-highlights--4"
+                    subtitle="personalized"
+                    title="wine experience" 
+                />
             </div>
         </section>
     );

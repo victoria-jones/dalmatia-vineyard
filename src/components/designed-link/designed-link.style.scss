@@ -1,0 +1,58 @@
+@import '../../sassStyles/main.scss';
+
+.designed-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+        display: block;
+
+        &--subtitle {
+            font-family: $font-display-secondary;
+            text-transform: lowercase;
+            font-size: 3.5rem;
+            margin-bottom: -1rem;
+        }
+        &--title {
+            font-family: $font-display;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+    }
+
+    &__branch-design {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: -1.7rem;
+        }
+
+        &--2 {
+            transform: scaleY(-1);
+        }
+    }
+
+    &__line {
+        background-color: $color-primary-red;
+        height: .2rem;
+        width: 6.5rem;
+        margin: 0 .3rem;
+    }
+
+    &__branch {
+        width: 5rem;
+        margin-top: -.2rem;
+
+        &--2 {
+            transform: scaleX(-1);
+        }
+
+        path {
+            fill: $color-primary-red;
+        }
+    }
+}

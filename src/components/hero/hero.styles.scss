@@ -57,6 +57,9 @@
 
     &__carousel-highlights {
         grid-area: carousel-highlight;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__header {
