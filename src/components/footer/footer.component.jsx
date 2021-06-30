@@ -5,7 +5,7 @@ import LionBackground from '../lion-background/lion-background.component';
 import './footer.styles.scss';
 
 const Footer = () => (
-    <footer class="footer lion-background section-padding">
+    <footer className="footer lion-background section-padding">
         <LionBackground lionBackgroundClass="footer--wrapper">
             <div className="footer__logo-wrapper">
                 <div className="footer__logo-image"></div>
