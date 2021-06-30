@@ -90,3 +90,22 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+.header-style--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 7rem;
+    height: .2rem;
+    background-color: $color-primary-red;
+    margin-top: .5rem;
+  }
+}
+
+
+
+
