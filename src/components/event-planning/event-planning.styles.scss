@@ -1,0 +1,25 @@
+@import '../../sassStyles/main.scss';
+
+.event-planning {
+    &--wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__side {
+        width: 50%;
+
+        &--1 {
+            max-width: 40rem;
+        }
+        
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+    }
+
+    &__p {
+        text-align: left;
+    }
+}

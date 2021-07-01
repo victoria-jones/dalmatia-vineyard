@@ -1,0 +1,43 @@
+@import '../../sassStyles/main.scss';
+
+.checkerboard {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 20rem));
+        grid-template-rows: repeat(2, minmax(auto, 20rem));
+        grid-gap: 1rem 1rem;
+
+        &__box {
+            @include primary-box-shadow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            &:nth-child(odd) {
+                background-color: $color-white;
+            }
+            &:nth-child(even) {
+                background-color: $color-secondary-red-dark;
+                color: $color-white;
+            }
+
+            &:hover {
+                transition: all .3s;
+                @include primary-box-shadow-hover(red);
+                cursor: pointer;
+                transform: scale(1.02) translateY(-.5rem);
+
+                &:active {
+                    @include primary-box-shadow-pressed(red);
+                    transform: scale(1) translateY(.3rem);
+                }
+            }
+        }
+    }
+
+}
