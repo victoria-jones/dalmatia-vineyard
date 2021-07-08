@@ -1,37 +1,50 @@
 import React from 'react';
 
+import StyledSecondaryHeading from '../styled-secondary-heading/styled-secondary-heading.component';
+
 import './checkerboard.styles.scss';
 
-const Checkerboard = ({ checkerboardClass }) => (
-    <section className={`checkerboard
-                        ${checkerboardClass ? checkerboardClass : ''}
-    `}>
-        <div className="checkerboard__grid">
-            <div className="checkerboard__grid__box checkboard__grid__box--1">
-                box 1
-            </div>
+import { ReactComponent as PersonalizedWineBottles } from '../../assets/SVG/wine-bottle.svg';
+import { ReactComponent as PhotographyVideography } from '../../assets/SVG/camera.svg';
+import { ReactComponent as PersonalizedInvitations } from '../../assets/SVG/invitation.svg';
+import { ReactComponent as Catering } from '../../assets/SVG/plate.svg';
+import { ReactComponent as EventPlanner } from '../../assets/SVG/rose.svg';
+import { ReactComponent as WineExperience } from '../../assets/SVG/wine-glass.svg';
 
-            <div className="checkerboard__grid__box checkboard__grid__box--2">
-                box 2
-            </div>
+const Checkerboard = ({ checkerboardClass, checkerboardTitles }) => {
 
-            <div className="checkerboard__grid__box checkboard__grid__box--3">
-                box 3
-            </div>
+    const boxImages = [
+        Catering,
+        WineExperience,
+        PersonalizedInvitations,
+        PersonalizedWineBottles,
+        PhotographyVideography,
+        EventPlanner
+    ];
 
-            <div className="checkerboard__grid__box checkboard__grid__box--4">
-                box 4
+    return (
+        <section className={`checkerboard
+                            ${checkerboardClass ? checkerboardClass : ''}
+        `}>
+            <div className="checkerboard__grid">
+                {checkerboardTitles.map((title) => {
+                    const SelectedImage = boxImages[checkerboardTitles.indexOf(title)];
+                    
+                    return (<div 
+                        className={`checkerboard__grid__box checkboard__grid__box--${checkerboardTitles.indexOf(title)}`}
+                        key={checkerboardTitles.indexOf(title)}
+                    >
+                        <SelectedImage
+                            className={`checkerboard__grid__box__image checkerboard__grid__box__image--${checkerboardTitles.indexOf(title)}`} 
+                        />
+                        <StyledSecondaryHeading>
+                            {title}
+                        </StyledSecondaryHeading>
+                    </div> )
+                })}
             </div>
-
-            <div className="checkerboard__grid__box checkboard__grid__box--5">
-                box 5
-            </div>
-
-            <div className="checkerboard__grid__box checkboard__grid__box--6">
-                box 6
-            </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+}
 
 export default Checkerboard;

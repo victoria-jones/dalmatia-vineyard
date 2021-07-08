@@ -18,16 +18,24 @@
             align-items: center;
             padding: 1rem;
 
-            &:nth-child(odd) {
-                background-color: $color-white;
-            }
             &:nth-child(even) {
+                background-color: $color-white;
+                fill: $color-primary-red;
+            }
+            &:nth-child(odd) {
                 background-color: $color-secondary-red-dark;
                 color: $color-white;
+                fill: $color-white;
+            }
+
+            &__image {
+                margin-bottom: 1.5rem;
+                height: 45%;
+                //height: 75%;
             }
 
             &:hover {
-                transition: all .3s;
+                transition: all .5s;
                 @include primary-box-shadow-hover(red);
                 cursor: pointer;
                 transform: scale(1.02) translateY(-.5rem);

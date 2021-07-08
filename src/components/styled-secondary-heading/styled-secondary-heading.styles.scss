@@ -1,0 +1,25 @@
+@import '../../sassStyles/main.scss';
+
+.styled-secondary-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        font-family: $font-body;
+        font-size: 1.8rem;
+    }
+
+    &::before, 
+    &::after {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: .2rem;
+        background-color: $color-primary-red;
+    }
+
+    &::before {
+        margin-bottom: .4rem;
+    }
+}
