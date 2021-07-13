@@ -1,0 +1,17 @@
+@import '../../sassStyles/main.scss';
+
+.custom-card {
+    width: 28rem;
+    height: 50rem;
+
+    @include primary-box-shadow;
+
+    &--wrapper {
+        .imageBox__content {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

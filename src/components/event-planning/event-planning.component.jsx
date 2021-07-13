@@ -6,6 +6,8 @@ import Checkerboard from '../checkerboard/checkerboard.component';
 
 import './event-planning.styles.scss';
 
+import backgroundImageWine from '../../assets/winebottle-glasses.jpg';
+
 const EventPlanning = () => {
     const checkerboardTitles = [
         "catering", 
@@ -17,8 +19,12 @@ const EventPlanning = () => {
     ];
 
     return (
-        <section className="event-planning section-padding">
-            <div className="event-planning--wrapper">
+        <section className="event-planning section-padding"
+            style={{
+                backgroundImage: `url(${backgroundImageWine})`
+            }}
+        >
+            <div className="event-planning--wrapper"> 
                 <div className="event-planning__side event-planning__side--1">
                     <div className="event-planning__heading">
                         <StyledHeading

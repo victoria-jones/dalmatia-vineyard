@@ -8,6 +8,12 @@
     &__heading {
         font-family: $font-body;
         font-size: 1.8rem;
+
+        &--secondary-styles {
+            font-family: $font-display;
+            font-size: 2.2rem;
+            padding: .7rem 0 1rem 0;
+        }
     }
 
     &::before, 
@@ -17,6 +23,13 @@
         width: 6rem;
         height: .2rem;
         background-color: $color-primary-red;
+    }
+
+    &--secondary-styles {
+        &::before,
+        &::after {
+            width: 9rem;
+        }
     }
 
     &::before {

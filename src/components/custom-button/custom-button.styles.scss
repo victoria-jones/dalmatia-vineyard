@@ -65,16 +65,17 @@
     }
     &:hover {
         .custom-button {
-            &--white{
+            &--white,
+            &--red {
                 &::after {
                     @include primary-box-shadow-hover(red);
                 }
             }
-            &--red {
+            /*&--red {
                 &::after {
-                    @include primary-box-shadow-hover(white); 
+                    @include primary-box-shadow-hover(red); 
                 }
-            }
+            }*/
         }
     }
     &:active {

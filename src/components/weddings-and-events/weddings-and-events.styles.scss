@@ -1,0 +1,14 @@
+@import '../../sassStyles/main.scss';
+
+.weddings-and-events {
+    color: $color-white;
+    overflow: hidden;
+    //necessary to fill up the space from the padding
+    background-color: $color-secondary-red-dark;
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
