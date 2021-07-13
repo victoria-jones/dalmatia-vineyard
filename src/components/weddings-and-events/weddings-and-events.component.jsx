@@ -33,7 +33,7 @@ const WeddingsAndEvents = () => {
                     heading="weddings and events"
                     text="see some of Dalmatia's specialized themes or work with our event planner to create your own"
                 />
-                <div className="weddings-and-events__cards section-padding">
+                <div className="weddings-and-events__cards sub-section-padding">
                     {backgroundImages.map(image =>
                         <CustomCard 
                             backgroundImage={image}

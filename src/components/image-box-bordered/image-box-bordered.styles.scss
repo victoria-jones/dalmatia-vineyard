@@ -34,6 +34,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-color: $color-primary-red;
     }
 
     &:hover {
@@ -46,7 +47,7 @@
     &--transparent {
         .imageBox__image-holder {
             opacity: .7;
-            filter: blur(.1rem);
+            filter: blur(.05rem);
         }
     }
 
