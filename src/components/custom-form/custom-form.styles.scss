@@ -1,0 +1,79 @@
+@import '../../sassStyles/main.scss';
+
+.custom-form {
+    width: 100%;
+    color: $color-white;
+    background-color: $color-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--wrapper {
+        max-width: 100rem;
+        height: 40rem;
+
+        @include primary-box-shadow;
+
+        .imageBox__content {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+    }
+
+    &__form-wrapper {
+        width: 70%;
+        padding-right: 3rem;
+    }
+
+    &__group {
+        text-align: left;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__label {
+        transition: all .5s;
+        margin-left: 1.5rem;
+        display: block;
+    }
+
+    &__input,
+    &__message {
+        padding: .8rem 1.5rem;
+        border: none;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+        color: grey;
+        font-family: inherit;
+        font-size: 1.5rem;
+
+        &:focus {
+            outline: none;
+            border-bottom: .2rem solid $color-primary-red;
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &:-moz-placeholder {
+            color: grey;
+        }
+    }
+
+    &__input:placeholder-shown + &__label,
+    &__message:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}
