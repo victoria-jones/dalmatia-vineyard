@@ -1,0 +1,30 @@
+@import '../../sassStyles/main.scss';
+
+.photo-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(auto, 20rem));
+        grid-template-rows: repeat(2, minmax(auto, 20rem));
+        grid-gap: 1rem 1rem;
+
+        &__box {
+            @include primary-box-shadow;
+
+            &:hover {
+                transition: all .5s;
+                @include primary-box-shadow-hover(red);
+                cursor: pointer;
+                transform: scale(1.02) translateY(-.5rem);
+
+                &:active {
+                    @include primary-box-shadow-pressed(red);
+                    transform: scale(1) translateY(.3rem);
+                }
+            }
+        }
+    }
+}
