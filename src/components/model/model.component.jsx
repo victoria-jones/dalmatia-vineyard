@@ -2,14 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 import './model.styles.scss';
 
-const Model = ({ backgroundImage, modelVisible }) => {
+const Model = ({ backgroundImage, showModel, showModelChange }) => {
 
-    const [showModel, setShowModel] = useState(modelVisible);
-    const [selectedImage, setSelectedImage] = useState(backgroundImage);
-
-    useEffect(()=> {
-        console.log(`showModel has changed in the model component: ${showModel}`);
-    }, [showModel]);
+    //const [showModel, setShowModel] = useState(modelVisible);
+    //const [selectedImage, setSelectedImage] = useState(backgroundImage);
 
     return (
         <div className={`model
@@ -19,14 +15,15 @@ const Model = ({ backgroundImage, modelVisible }) => {
                     ${showModel ? '' : 'model__popup--hidden'}
                 `}
                 style={{
-                    backgroundImage: `url(${selectedImage})`
+                    backgroundImage: `url(${backgroundImage})`
                 }}
             >
                 <div className="model--wrapper">
                     <div className="model__close"
                         onClick={() => {
-                            setShowModel(false);
-                            setSelectedImage('');
+                            //setShowModel(false);
+                            showModelChange(false);
+                            //setSelectedImage('');
                         }}
                     >&#10006;</div>
                 </div>

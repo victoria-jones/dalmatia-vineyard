@@ -17,9 +17,13 @@ const PhotoGallery = ({ images }) => {
         console.log(`show popup: ${showModel}`);
     }, [modelImage]);
 
+    const showModelChange = (newValue) => {
+        setShowModel(newValue);
+    }
+
    return (
         <div className="photo-gallery sub-section-padding">
-            <Model modelVisible={showModel} />
+            <Model backgroundImage={modelImage} showModel={showModel} showModelChange={showModelChange} />
             <div className="photo-gallery__grid">
                 {images.thumbnails.map(image => 
                     <div 
