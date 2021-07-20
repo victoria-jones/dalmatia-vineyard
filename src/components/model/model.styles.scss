@@ -1,0 +1,71 @@
+@import '../../sassStyles/main.scss';
+
+.model {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-secondary-red-dark, .8);
+    backdrop-filter: blur(.2rem);
+    -webkit-backdrop-filter: blur(.2rem);
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 2s;
+
+    &--hidden {
+        z-index: -100;
+        opacity: 0;
+    }
+
+    &__popup {
+        position: relative;
+        width: 80rem;
+        height: 50rem;
+        background-color: $color-white;
+        @include primary-box-shadow;
+        bottom: 0;
+        
+        transition: ease-out all .5s;
+
+        //background image 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &--hidden {
+            bottom: -110vh;
+            transform: scale(.8);
+        }
+    }
+
+    &--wrapper {
+        padding: 1rem;
+    }
+
+    &__close {
+        color: $color-primary-red;
+        font-size: 4rem;
+        text-shadow: 0rem .2rem .5rem grey;
+        text-align: right;
+        margin-top: -1rem;
+
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-.2rem);
+            text-shadow: 0rem .4rem .9rem $color-primary-red;
+        }
+
+        &:active {
+            transform: translateY(.1rem);
+            text-shadow: 0rem .1rem .3rem $color-primary-red;
+        }
+    }
+}
