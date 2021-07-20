@@ -1,6 +1,9 @@
 @import '../../sassStyles/main.scss';
 
 .footer {
+    display: flex;
+    justify-content: center;
+
     color: $color-white;
     overflow: hidden;
 

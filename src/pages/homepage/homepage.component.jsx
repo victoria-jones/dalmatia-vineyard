@@ -5,11 +5,15 @@ import EventPlanning from '../../components/event-planning/event-planning.compon
 import WeddingsAndEvents from '../../components/weddings-and-events/weddings-and-events.component';
 import CustomForm from '../../components/custom-form/custom-form.component';
 import Gallery from '../../components/gallery/gallery.component';
+import BackgroundImage from '../../components/background-image/background-image.component';
 
 import './homepage.styles.scss';
 
+import backgroundImage from '../../assets/hero-background.jpg';
+
 const HomePage = () => (
     <div className='homepage'>
+        <BackgroundImage image={backgroundImage} />
         <Hero />
         <EventPlanning />
         <WeddingsAndEvents />

@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Model from '../model/model.component';
 
 import './photo-gallery.styles.scss';
 
-//take object with thumbnail image and big image
-    //make a module that will be used here for the big image
-
 const PhotoGallery = ({ images }) => {
 
     const [modelImage, setModelImage] = useState();
-    const [showModel, setShowModel] = useState(true);
-
-    useEffect(() => {
-        console.log(`image: ${modelImage}`);
-        console.log(`show popup: ${showModel}`);
-    }, [modelImage]);
+    const [showModel, setShowModel] = useState(false);
 
     const showModelChange = (newValue) => {
         setShowModel(newValue);

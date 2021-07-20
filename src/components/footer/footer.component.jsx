@@ -6,7 +6,7 @@ import './footer.styles.scss';
 
 const Footer = () => (
     <footer className="footer lion-background section-padding">
-        <LionBackground lionBackgroundClass="footer--wrapper">
+        <LionBackground lionBackgroundClass="footer--wrapper wrapper-width">
             <div className="footer__logo-wrapper">
                 <div className="footer__logo-image"></div>
                 <h3 className="footer__logo-text">Dalmatia</h3>

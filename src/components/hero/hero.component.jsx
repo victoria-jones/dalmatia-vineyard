@@ -24,61 +24,64 @@ const Hero = () => {
 
     return (
         <section className="hero">
+            <div className="hero--wrapper">
 
-            <Carousel carouselClass="hero__carousel"
-                        carouselImages={carouselImages}      
-            >
-                <div className="carousel__container hero__carousel--container">
-                    <div className="hero__header">
-                        <div className="hero__header--logo-img"></div>
-                        <h1 className="hero__header--logo logo-font">Dalmatia</h1>
-                        <h2 className="hero__header--subhead header-font">Vineyard Estate</h2>
+                <Carousel carouselClass="hero__carousel"
+                            carouselImages={carouselImages}      
+                >
+                    <div className="carousel__container hero__carousel--container">
+                        <div className="hero__header">
+                            <div className="hero__header--logo-img"></div>
+                            <h1 className="hero__header--logo logo-font">Dalmatia</h1>
+                            <h2 className="hero__header--subhead header-font">Vineyard Estate</h2>
+                        </div>
+                        <div className="hero__cta">
+                            <span className="hero__cta--text">
+                                host special events and weddings
+                            </span>
+                            <CustomButton white link="" buttonClass="hero__button">learn more</CustomButton>
+                        </div>
                     </div>
-                    <div className="hero__cta">
-                        <span className="hero__cta--text">
-                            host special events and weddings
-                        </span>
-                        <CustomButton white link="" buttonClass="hero__button">learn more</CustomButton>
-                    </div>
+                </Carousel>
+
+                <div className="hero__highlight hero__highlight--weddings">
+                    <ImageBoxBordered backgroundImage={weddingImage}>
+                        <CustomButton white link="" buttonClass="hero__button hero__highlight-button">weddings</CustomButton>
+                    </ImageBoxBordered>
                 </div>
-            </Carousel>
 
-            <div className="hero__highlight hero__highlight--weddings">
-                <ImageBoxBordered backgroundImage={weddingImage}>
-                    <CustomButton white link="" buttonClass="hero__button hero__highlight-button">weddings</CustomButton>
-                </ImageBoxBordered>
-            </div>
+                <div className="hero__highlight hero__highlight--event-planning">
+                    <ImageBoxBordered backgroundImage={eventImage}>
+                        <CustomButton white link="" buttonClass="hero__button hero__highlight-button">event planning</CustomButton>
+                    </ImageBoxBordered>
+                </div>
 
-            <div className="hero__highlight hero__highlight--event-planning">
-                <ImageBoxBordered backgroundImage={eventImage}>
-                    <CustomButton white link="" buttonClass="hero__button hero__highlight-button">event planning</CustomButton>
-                </ImageBoxBordered>
-            </div>
+                <div className="hero__carousel-highlights">
+                    <DesignedLink 
+                        linkClass="hero__carousel-highlights hero__carousel-highlights--1"
+                        subtitle="special"
+                        title="events" 
+                    />
 
-            <div className="hero__carousel-highlights">
-                <DesignedLink 
-                    linkClass="hero__carousel-highlights hero__carousel-highlights--1"
-                    subtitle="special"
-                    title="events" 
-                />
+                    <DesignedLink 
+                        linkClass="hero__carousel-highlights hero__carousel-highlights--2"
+                        subtitle="personalized"
+                        title="wine bottles" 
+                    />
 
-                <DesignedLink 
-                    linkClass="hero__carousel-highlights hero__carousel-highlights--2"
-                    subtitle="personalized"
-                    title="wine bottles" 
-                />
+                    <DesignedLink 
+                        linkClass="hero__carousel-highlights hero__carousel-highlights--3"
+                        subtitle="all inclusive"
+                        title="event planning" 
+                    />
 
-                <DesignedLink 
-                    linkClass="hero__carousel-highlights hero__carousel-highlights--3"
-                    subtitle="all inclusive"
-                    title="event planning" 
-                />
+                    <DesignedLink 
+                        linkClass="hero__carousel-highlights hero__carousel-highlights--4"
+                        subtitle="personalized"
+                        title="wine experience" 
+                    />
+                </div>
 
-                <DesignedLink 
-                    linkClass="hero__carousel-highlights hero__carousel-highlights--4"
-                    subtitle="personalized"
-                    title="wine experience" 
-                />
             </div>
         </section>
     );

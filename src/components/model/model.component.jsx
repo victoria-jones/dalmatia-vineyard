@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './model.styles.scss';
 
 const Model = ({ backgroundImage, showModel, showModelChange }) => {
-
-    //const [showModel, setShowModel] = useState(modelVisible);
-    //const [selectedImage, setSelectedImage] = useState(backgroundImage);
 
     return (
         <div className={`model
@@ -21,9 +18,7 @@ const Model = ({ backgroundImage, showModel, showModelChange }) => {
                 <div className="model--wrapper">
                     <div className="model__close"
                         onClick={() => {
-                            //setShowModel(false);
                             showModelChange(false);
-                            //setSelectedImage('');
                         }}
                     >&#10006;</div>
                 </div>

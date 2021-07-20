@@ -24,7 +24,7 @@ const EventPlanning = () => {
                 backgroundImage: `url(${backgroundImageWine})`
             }}
         >
-            <div className="event-planning--wrapper"> 
+            <div className="event-planning--wrapper wrapper-width"> 
                 <div className="event-planning__side event-planning__side--1">
                     <div className="event-planning__heading">
                         <StyledHeading

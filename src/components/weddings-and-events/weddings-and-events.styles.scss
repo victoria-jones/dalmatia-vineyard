@@ -1,6 +1,9 @@
 @import '../../sassStyles/main.scss';
 
 .weddings-and-events {
+    display: flex;
+    justify-content: center;
+
     color: $color-white;
     overflow: hidden;
     //necessary to fill up the space from the padding

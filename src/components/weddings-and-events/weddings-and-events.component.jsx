@@ -26,7 +26,7 @@ const WeddingsAndEvents = () => {
     
     return (
         <section className="weddings-and-events section-padding">
-            <LionBackground lionBackgroundClass="weddings-and-events--wrapper">
+            <LionBackground lionBackgroundClass="weddings-and-events--wrapper wrapper-width">
                 <StyledHeading 
                     styledHeadingClass="weddings-and-events__heading"
                     subheading="custom and themed"

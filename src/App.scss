@@ -46,9 +46,39 @@ html {
 
 body {
   box-sizing: border-box;
-  //background color only for testing
-  background-color: lightgrey;
 }
+
+/*************** 
+      GRID
+***************/ 
+
+.App {
+  display: grid;
+  //10 columns for all pages
+  grid-template-rows: max-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr)
+                        [center-start] repeat(8, [col-start] minmax(min-content, 18rem) [col-end])
+                        [center-end] minmax(6rem, 1fr) [full-end]; 
+}
+
+.header {
+  grid-column: center-start / center-end;
+  grid-row: 1;
+}
+.homepage {
+  grid-column: full-start / full-end;
+  grid-row: 2;
+}
+.footer {
+  grid-column: full-start/ full-end;
+  grid-row: 3;
+}
+
+.background-image {
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+}
+
 
 
 /*************** 

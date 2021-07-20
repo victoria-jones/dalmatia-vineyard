@@ -1,22 +1,25 @@
 @import '../../sassStyles/main.scss';
 
 .hero { 
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
 
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr) .7fr;
-    gap: 1rem 1rem;
-    grid-template-areas:
-        "carousel carousel carousel carousel highlight-1 highlight-1"
-        "carousel carousel carousel carousel highlight-2 highlight-2"
-        "carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight";
 
+    &--wrapper {
+        width: 100%;
+        max-width: 144rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr) .7fr;
+        gap: 1rem 1rem;
+        grid-template-areas:
+            "carousel carousel carousel carousel highlight-1 highlight-1"
+            "carousel carousel carousel carousel highlight-2 highlight-2"
+            "carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight carousel-highlight";
+    }
 
     &__carousel {
         grid-area: carousel;
-        //overflow: hidden;
 
         width: 100%;
         height: 60rem;

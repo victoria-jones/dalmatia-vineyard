@@ -1,7 +1,9 @@
 @import '../../sassStyles/main.scss';
 
 .event-planning {
-    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 10rem center;
