@@ -6,101 +6,85 @@ import './carousel.styles.scss';
 
 const Carousel = ({ children, carouselClass, carouselImages }) => {
 
-    //const [carouselImages, setCarouselImages] = useState([]);
     const [carouselCount, setCarouselCount] = useState(0);
     const [carouselMarkerLocation, setCarouselMarkerLocation] = useState();
+    //indicate if carousel will run on autorun (boolean);
     const [runCarousel, setRunCarousel] = useState(true);
 
-    //take images as props
-        //map images to ImageBorderBox objs
-    //(optional) take children to fill inside carousel. (on top of images)
+    //the time between carousel slides
+    const carouselInterval = 5000;
+    //carousel slides
+    const carouselImageDivs = document.getElementsByClassName('carousel__image');
+    //used to set the interval
+    let autoSlide;
 
-    //start the carousel
+    //new test carousel 
+
+    //start the auto carousel on page load
     useEffect(() => {
-        let carouselTimeout;
-        const carouselImageDivs = document.getElementsByClassName('carousel__image');
+        autoCarousel();
 
-        if(runCarousel) {
-            carouselTimeout = setTimeout(() => {
-                setCarouselCount(carouselCount+1);
-            }, 1000);
+        //cleanup interval, prevent state change when component unmounts
+        return () => {
+            cancelAutoCarousel();
         }
-      
-        if(carouselCount > carouselImageDivs.length-1) {
-            return setCarouselCount(0);
-        } else if (carouselCount < 0) {
-            return setCarouselCount(carouselImageDivs.length-1);
-        }
-   
-        //set display of current carousel point and hide others
-        for(let i = 0; i < carouselImageDivs.length; i++) {
-            carouselImageDivs[i].style.display = "none";
-        }
-        carouselImageDivs[carouselCount].style.display = "flex";
+    });
 
-        //change the carousel marker location
+    //run the automatic carousel
+    const autoCarousel = () => {
+        setRunCarousel(true);
+        autoSlide = runCarousel ? setInterval(nextSlide, carouselInterval) : null;
+
+        //set carouselMarker location
+        moveCarouselMarker();
+        //set current slide here
+        setCurrentCarouselImage();
+    };
+
+    //set the next slide count
+    const nextSlide = () => {
+        cancelAutoCarousel();
+
+        if(carouselCount >= carouselImageDivs.length-1) {
+            setCarouselCount(0);
+        } else {
+            setCarouselCount(carouselCount+1);
+        }
+    };
+
+    //cancel the auto carousel and remove the interval
+    const cancelAutoCarousel = () => {
+        setRunCarousel(false);
+        clearInterval(autoSlide);
+    };
+
+    //move the carousel diamond marker to match the current slide image
+    const moveCarouselMarker = () => {
         const carouselDiamonds = document.getElementsByClassName("carousel__location-marker--diamond");
         setCarouselMarkerLocation(carouselDiamonds[carouselCount].offsetLeft);
-        
-        //carousel timer
-        /*setTimeout(() => {
-            setCarouselCount(carouselCount+1);
-        }, 5000);*/ 
 
-        //cleanup 
-        /*
-            currently the bc of how this is setup, the carousel will stop moving when it hits 0 again
-            how do it get it moving?
-        */
-        return () => clearTimeout(carouselTimeout);
-        
-
-    }, [carouselCount, runCarousel]);
-
-    //set Carousel marker location
-    useEffect(() => {
         let carouselMarker = document.getElementsByClassName("carousel__location-marker--diamond-highlight")[0];
         const markerMovement = (carouselMarkerLocation - 8)/10;
 
         carouselMarker.style.left = `${markerMovement}rem`;
-    }, [carouselMarkerLocation]);
+    };
 
-    
-
-    //carousel functionality
-    /*const runCarousel = () => {
-        const carouselImageDivs = document.getElementsByClassName('carousel__image');
-        if(carouselCount > carouselImageDivs.length-1) {
-            return setCarouselCount(0);
-        } else if (carouselCount < 0) {
-            return setCarouselCount(carouselImageDivs.length-1);
-        }
-
+    //set the slide image to the current caoruselCount
+    const setCurrentCarouselImage = () => {
         //set display of current carousel point and hide others
         for(let i = 0; i < carouselImageDivs.length; i++) {
             carouselImageDivs[i].style.display = "none";
         }
         carouselImageDivs[carouselCount].style.display = "flex";
-
-        //change the carousel marker location
-        const carouselDiamonds = document.getElementsByClassName("carousel__location-marker--diamond");
-        setCarouselMarkerLocation(carouselDiamonds[carouselCount].offsetLeft);
-        
-        //carousel timer
-        setTimeout(() => {
-            setCarouselCount(carouselCount+1);
-        }, 5000);
-    }*/
+    };
 
     //set marker location when user clicks the diamond
     const moveCarouselPosition = (target) => {
+        setRunCarousel(false);
         const diamondParent = target.parentNode;
         const diamondPosition = (Array.from(diamondParent.children).indexOf(target)) - 1;
-        console.log(`move carousel position to: ${diamondPosition}`);
 
-        //setCarouselMarkerLocation(diamondPosition);
         setCarouselCount(diamondPosition);
-        setRunCarousel(false);
     }
 
     return(
