@@ -38,6 +38,7 @@ const WeddingsAndEvents = () => {
                         <CustomCard 
                             backgroundImage={image}
                             cardTitle={cardTitles[backgroundImages.indexOf(image)]}
+                            key={backgroundImages.indexOf(image)}
                         />
                     )}
                 </div>

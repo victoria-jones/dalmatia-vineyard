@@ -19,15 +19,15 @@ const CustomForm = () => (
                 <form action="#" className="custom-form__form">
                     <div className="custom-form__group">
                         <input type="text" id="name" name="name" className="custom-form__input"  placeholder="Name" required/>
-                        <label for="name" className="custom-form__label">Name</label>
+                        <label htmlFor="name" className="custom-form__label">Name</label>
                     </div>
                     <div className="custom-form__group">
                         <input type="email" id="email" name="email" className="custom-form__input"  placeholder="Email" required/>
-                        <label for="name" className="custom-form__label">Email</label>
+                        <label htmlFor="name" className="custom-form__label">Email</label>
                     </div>
                     <div className="custom-form__group">
                         <textarea id="message" name="message" className="custom-form__message" placeholder="Message"></textarea>
-                        <label for="name" className="custom-form__label">Message</label>
+                        <label htmlFor="name" className="custom-form__label">Message</label>
                     </div>
                     <div className="custom-form__group">
                         <CustomButton
