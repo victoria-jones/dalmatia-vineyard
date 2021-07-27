@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import LionBackground from '../lion-background/lion-background.component';
 
 import './footer.styles.scss';
@@ -16,31 +17,31 @@ const Footer = () => (
                 <div className="footer__nav__section footer__nav__section--1">
                     <h3 className="footer__nav__section--header footer__nav__section--header--1 header-style header-style--1">Quick links</h3>
                     <ul className="footer__nav__list">
-                        <li className="footer__nav__item"><span className="footer__nav__link">about us</span></li>
-                        <li className="footer__nav__item"><span className="footer__nav__link">booking</span></li>
-                        <li className="footer__nav__item"><span className="footer__nav__link">FAQ</span></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/about">about us</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/contact">booking</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/">FAQ</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer__nav__section footer__nav__section--2">
                 <h3 className="footer__nav__section--header footer__nav__section--header--2 header-style header-style--1">Contact</h3>
                     <ul className="footer__nav__list">
-                        <li className="footer__nav__item"><span className="footer__nav__link">contact us</span></li>
-                        <li className="footer__nav__item"><span className="footer__nav__link">(555) 555 - 5555</span></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/contact">contact us</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/contact">(555) 555 - 5555</Link></li>
                         <li className="footer__nav__item">
-                            <span className="footer__nav__link">
+                            <Link className="footer__nav__link" to="/contact">
                                 <span className="footer__nav__link--span">555 Vineyard Way</span>Tree Town CA 55555
-                            </span>
+                            </Link>
                         </li>
                     </ul>
                 </div>
 
                 <div className="footer__nav__section footer__nav__section--3">
-                <h3 className="footer__nav__section--header footer__nav__section--header--3 header-style header-style--1">Quick links</h3>
+                <h3 className="footer__nav__section--header footer__nav__section--header--3 header-style header-style--1">Other Websites</h3>
                     <ul className="footer__nav__list">
-                        <li className="footer__nav__item"><span className="footer__nav__link">theme 1</span></li>
-                        <li className="footer__nav__item"><span className="footer__nav__link">theme 2</span></li>
-                        <li className="footer__nav__item"><span className="footer__nav__link">theme 3</span></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/">theme 1</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/">theme 2</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/">theme 3</Link></li>
                     </ul>
                 </div>
             </section>
