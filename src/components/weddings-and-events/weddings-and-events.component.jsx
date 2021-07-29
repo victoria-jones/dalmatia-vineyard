@@ -21,7 +21,7 @@ const WeddingsAndEvents = () => {
     const cardTitles = [
         "Theme Title One",
         "Theme Title Two",
-        "Theme Title Three"
+        "Theme Title Three" 
     ];
     
     return (

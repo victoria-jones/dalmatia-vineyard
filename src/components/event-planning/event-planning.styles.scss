@@ -8,9 +8,18 @@
     background-repeat: no-repeat;
     background-position: 10rem center;
 
+    @include respond(tab-land) {
+        background-position: 0 center;
+    }
+
     &--wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__side {
@@ -18,8 +27,17 @@
 
         &--1 {
             max-width: 40rem;
+
+            @include respond(tab-land) {
+                margin-bottom: 5rem;
+            }
         }
         
+        &--2 {
+            @include respond(tab-port) {
+                justify-content: center;
+            }
+        }
     }
 
     &__text {

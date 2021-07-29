@@ -4,7 +4,9 @@ import ImageBoxBordered from '../image-box-bordered/image-box-bordered.component
 import StyledSecondaryHeading from '../styled-secondary-heading/styled-secondary-heading.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import './custom-card.styles.scss';
+import './custom-card.styles.scss'; 
+
+//change loaded image based on responsive styling
 
 const CustomCard = ({ backgroundImage, cardTitle }) => (
     <section className="custom-card">

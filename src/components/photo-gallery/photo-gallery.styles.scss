@@ -11,6 +11,11 @@
         grid-template-rows: repeat(2, minmax(auto, 20rem));
         grid-gap: 1rem 1rem;
 
+        @include respond(tab-port) {
+            grid-template-columns: repeat(3, minmax(auto, 20rem));
+            grid-template-rows: repeat(3, minmax(auto, 20rem));
+        }
+
         &__box {
             @include primary-box-shadow;
 

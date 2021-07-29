@@ -4,6 +4,10 @@
 
 .section-padding {
     padding: 15rem 0;
+
+    @include respond(tab-land) {
+        padding: 9rem 0;
+    }
 }
 
 .sub-section-padding {

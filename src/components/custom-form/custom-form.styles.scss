@@ -15,16 +15,30 @@
 
         @include primary-box-shadow;
 
+        @include respond(tab-port) {
+            height: 60rem;
+            max-width: 90%;
+        }
+
         .imageBox__content {
             display: flex;
             justify-content: space-between;
             width: 90%;
+
+            @include respond(tab-port) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 
     &__heading {
         display: flex;
         align-items: center;
+
+        @include respond(tab-port) {
+           order: -1; 
+        }
     }
 
     &__form-wrapper {

@@ -6,6 +6,15 @@
 
     @include primary-box-shadow;
 
+    @include respond(tab-port) {
+        width: 90%;
+        height: 28rem;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
     &--wrapper {
         .imageBox__content {
             height: 80%;
