@@ -64,6 +64,10 @@ body {
 .header {
   grid-column: center-start / center-end;
   grid-row: 1;
+
+  @include respond(tab-land) {
+    grid-column: full-start / full-end;
+  }
 }
 .homepage {
   grid-column: full-start / full-end;

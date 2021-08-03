@@ -1,0 +1,94 @@
+@import '../../sassStyles/main.scss';
+
+.mobile-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__icon,
+    &__icon-background {
+        transition: all .7s;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 7rem;
+        height: 7rem;
+        @include borderStyle(white);
+
+        &:hover {
+            cursor: pointer;
+            
+        }
+    }
+
+    &__icon-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-white;
+
+        @include primary-box-shadow;
+    }
+
+    &__hamburger-bar {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+
+        &::before {
+            top: 1.2rem;
+        }
+
+        &::after {
+            top: -1.2rem;
+        }
+    }
+
+    &__hamburger-bar,
+    &__hamburger-bar::after,
+    &__hamburger-bar::before {
+        transition: all .7s;
+        width: 3.3rem;
+        height: .3rem;
+        background-color: $color-primary-red;
+    }
+
+
+
+    /**************************
+        MENU FUNCTIONALITY
+    **************************/
+
+    &__checkbox:checked ~ &__label &__icon &__icon-background {
+        transform: rotate(180deg);
+    }
+
+    &__checkbox:checked ~ &__label &__icon &__icon-background &__hamburger-bar {
+        background-color: $color-white;
+    }
+    &__checkbox:checked ~ &__label &__icon &__icon-background &__hamburger-bar::before {
+        transform: rotate(-225deg);
+        top: 0;
+    }
+    &__checkbox:checked ~ &__label &__icon &__icon-background &__hamburger-bar::after {
+        transform: rotate(225deg);
+        top: 0;
+    }
+}

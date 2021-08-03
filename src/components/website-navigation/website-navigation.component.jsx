@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './website-navigation.styles.scss';
 
-const WebsiteNavigation = ({ logoSize, navClass }) => {
+const WebsiteNavigation = ({ navClass }) => {
     const location = useLocation();
 
     const [currentLocation, setCurrentLocation ] = useState("/");
@@ -38,7 +38,7 @@ const WebsiteNavigation = ({ logoSize, navClass }) => {
             setDiamondWidth(linkWidth);
         }
         
-    }, [currentLocation, logoSize]);
+    }, [currentLocation]);
 
     const moveDiamond = (target) => {
         let mouseLocation = target.parentNode.offsetLeft;
