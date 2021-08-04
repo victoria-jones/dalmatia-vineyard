@@ -153,6 +153,25 @@ h1, h2, h3, h4 {
   }
 }
 
+.nav-link {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-white;
+    text-transform: lowercase;
+  }
+  
+  &:hover,
+  &:active {
+    color: $color-primary-red;
+    transition: all .5s;
+  }
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
 
 
 

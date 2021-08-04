@@ -4,10 +4,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     &__checkbox {
         display: none;
+    }
+
+    &__label {
+        display: relative;
+        z-index: 1000;
     }
 
     &__icon,
@@ -34,6 +38,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: -1;
 
         width: 5rem;
         height: 5rem;
@@ -70,6 +76,46 @@
         background-color: $color-primary-red;
     }
 
+    &__nav-background {
+        position: absolute;
+        top: -50rem;
+        left: 0;
+        //z-index: -100;
+        z-index: 100;
+        background-color: $color-secondary-red-dark;
+        width: 100%;
+        height: 0;
+        //opacity: 0;
+
+        transition: all .9s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+
+    &__nav {
+        text-align: left;
+
+        &--wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__nav-location-marker {
+        color: $color-primary-red;
+        margin-right: 1rem;
+    }
+
+    &__list,
+    &__nav-location-marker {
+        font-size: 2.3rem;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
 
 
     /**************************
@@ -90,5 +136,12 @@
     &__checkbox:checked ~ &__label &__icon &__icon-background &__hamburger-bar::after {
         transform: rotate(225deg);
         top: 0;
+    }
+
+    &__checkbox:checked ~ &__nav-background {
+        //opacity: 1;
+        //z-index: 100;
+        top: 0;
+        height: 100vh;
     }
 }

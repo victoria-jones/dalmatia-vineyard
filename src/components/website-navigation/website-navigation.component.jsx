@@ -52,7 +52,7 @@ const WebsiteNavigation = ({ navClass }) => {
 
     return (
         <nav className={`website-navigation ${navClass ? navClass : ''}`}>
-            <ul className="website-navigation__list">
+            <ul className="website-navigation__list nav-list">
                 <li className="website-navigation__list-item" 
                     onMouseOver={(e) => moveDiamond(e.target)} 
                     onMouseOut={() => {
@@ -61,7 +61,7 @@ const WebsiteNavigation = ({ navClass }) => {
                         }
                     }
                 >
-                    <Link className="website-navigation__link" to='/'>
+                    <Link className="website-navigation__link nav-link" to='/'>
                         home
                     </Link>
                 </li>
@@ -73,7 +73,7 @@ const WebsiteNavigation = ({ navClass }) => {
                        }
                    } 
                 >
-                    <Link className="website-navigation__link" to='/about'>
+                    <Link className="website-navigation__link nav-link" to='/about'>
                         about
                     </Link>
                 </li>
@@ -85,7 +85,7 @@ const WebsiteNavigation = ({ navClass }) => {
                         }
                     } 
                 >
-                    <Link className="website-navigation__link" to='/events'>
+                    <Link className="website-navigation__link nav-link" to='/events'>
                         events
                     </Link>
                 </li>
@@ -97,7 +97,7 @@ const WebsiteNavigation = ({ navClass }) => {
                         }
                     } 
                 >
-                    <Link className="website-navigation__link" to='/wine_experience'>
+                    <Link className="website-navigation__link nav-link" to='/wine_experience'>
                         wine experience
                     </Link>
                 </li>
@@ -109,7 +109,7 @@ const WebsiteNavigation = ({ navClass }) => {
                         }
                     } 
                 >
-                    <Link className="website-navigation__link" to='/contact'>
+                    <Link className="website-navigation__link nav-link" to='/contact'>
                         contact
                     </Link>
                 </li>
