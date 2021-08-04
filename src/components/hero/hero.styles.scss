@@ -81,6 +81,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        //flex-basis: 25%;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            //flex-basis: 50%;
+            & > * {
+                //flex-grow: 2;
+
+            }
+        }
     }
 
     &__header {

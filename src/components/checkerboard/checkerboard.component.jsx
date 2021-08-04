@@ -37,7 +37,7 @@ const Checkerboard = ({ checkerboardClass, checkerboardTitles }) => {
                         <SelectedImage
                             className={`checkerboard__grid__box__image checkerboard__grid__box__image--${checkerboardTitles.indexOf(title)}`} 
                         />
-                        <StyledSecondaryHeading>
+                        <StyledSecondaryHeading secondaryHeadingClass="checkerboard__grid__box__title">
                             {title}
                         </StyledSecondaryHeading>
                     </div> )

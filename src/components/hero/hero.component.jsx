@@ -58,25 +58,25 @@ const Hero = () => {
 
                 <div className="hero__carousel-highlights">
                     <DesignedLink 
-                        linkClass="hero__carousel-highlights hero__carousel-highlights--1"
+                        linkClass="hero__carousel-highlight hero__carousel-highlights--1"
                         subtitle="special"
                         title="events" 
                     />
 
                     <DesignedLink 
-                        linkClass="hero__carousel-highlights hero__carousel-highlights--2"
+                        linkClass="hero__carousel-highlight hero__carousel-highlights--2"
                         subtitle="personalized"
                         title="wine bottles" 
                     />
 
                     <DesignedLink 
-                        linkClass="hero__carousel-highlights hero__carousel-highlights--3"
+                        linkClass="hero__carousel-highlight hero__carousel-highlights--3"
                         subtitle="all inclusive"
                         title="event planning" 
                     />
 
                     <DesignedLink 
-                        linkClass="hero__carousel-highlights hero__carousel-highlights--4"
+                        linkClass="hero__carousel-highlight hero__carousel-highlights--4"
                         subtitle="personalized"
                         title="wine experience" 
                     />

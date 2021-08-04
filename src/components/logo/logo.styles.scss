@@ -4,4 +4,9 @@
     width: 8rem;
     height: 8rem;
     background-color: $color-primary-red;
+
+    @include respond(tab-land) {
+        width: 5rem;
+        height: 5rem;
+    }
 }

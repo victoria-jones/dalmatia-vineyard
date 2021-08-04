@@ -9,7 +9,8 @@
         display: none;
     }
 
-    &__label {
+    &__label,
+    &__logo-link {
         display: relative;
         z-index: 1000;
     }
@@ -24,8 +25,8 @@
         align-items: center;
         justify-content: center;
 
-        width: 7rem;
-        height: 7rem;
+        width: 5rem;
+        height: 5rem;
         @include borderStyle(white);
 
         &:hover {
@@ -41,8 +42,8 @@
         position: relative;
         z-index: -1;
 
-        width: 5rem;
-        height: 5rem;
+        width: 3.5rem;
+        height: 3.5rem;
         background-color: $color-white;
 
         @include primary-box-shadow;
@@ -59,11 +60,11 @@
         }
 
         &::before {
-            top: 1.2rem;
+            top: 1rem;
         }
 
         &::after {
-            top: -1.2rem;
+            top: -1rem;
         }
     }
 
@@ -71,7 +72,7 @@
     &__hamburger-bar::after,
     &__hamburger-bar::before {
         transition: all .7s;
-        width: 3.3rem;
+        width: 2rem;
         height: .3rem;
         background-color: $color-primary-red;
     }
@@ -80,12 +81,10 @@
         position: absolute;
         top: -50rem;
         left: 0;
-        //z-index: -100;
         z-index: 100;
         background-color: $color-secondary-red-dark;
         width: 100%;
         height: 0;
-        //opacity: 0;
 
         transition: all .9s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
@@ -103,6 +102,7 @@
     }
 
     &__nav-location-marker {
+        //align-self: start;
         color: $color-primary-red;
         margin-right: 1rem;
     }
