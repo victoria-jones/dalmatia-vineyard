@@ -11,13 +11,17 @@
 
     &--wrapper {
         max-width: 100rem;
-        height: 40rem;
+        height: 45rem;
 
         @include primary-box-shadow;
 
         @include respond(tab-port) {
             height: 60rem;
             max-width: 90%;
+        }
+
+        @include respond(phone) {
+            height: 75rem;
         }
 
         .imageBox__content {
@@ -44,6 +48,11 @@
     &__form-wrapper {
         width: 70%;
         padding-right: 3rem;
+
+        @include respond(phone) {
+            width: 90%;
+            padding: 0;
+        }
     }
 
     &__group {
@@ -71,6 +80,10 @@
         font-family: inherit;
         font-size: 1.5rem;
 
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
             border-bottom: .2rem solid $color-primary-red;
@@ -81,6 +94,13 @@
         &:-ms-input-placeholder,
         &:-moz-placeholder {
             color: grey;
+        }
+    }
+
+    &__message {
+        height: 10rem;
+        @include respond(phone) {
+            height: 20rem;
         }
     }
 

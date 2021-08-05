@@ -33,6 +33,18 @@
         display: flex;
         justify-content: space-between;
 
+        @include respond(phone) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__section {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+        }
+
         &__list {
             list-style-type: none;
             text-align: left;
@@ -42,13 +54,45 @@
             &:not(:last-child) {
                 margin-bottom: .8rem;
             }
+
+            &:hover {
+                transform: translateY(-.5rem);
+            }
+            &:active {
+                transform: translateY(0);
+            }
+        }
+        &__link,
+        &__link::after,
+        &__item {
+            transition: all .3s;
         }
 
         &__link {
-            text-decoration: underline;
+            text-decoration: none;
+            color: $color-white;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 20%;
+                height: .1rem;
+                background-color: $color-white;
+            }
 
             &--span {
                 display: block;
+            }
+
+            &:hover {
+                &::after {
+                    width: 50%;
+                    background-color: $color-primary-red;
+                }
+            }
+
+            &:active {
+                color: $color-primary-red;
             }
         }
     }

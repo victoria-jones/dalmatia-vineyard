@@ -34,6 +34,13 @@
     padding: 0 3rem 0rem 3rem;
     z-index: 1;
 
+    @include respond(tab-land) {
+        font-size: 3rem;
+    }
+    @include respond(phone) {
+        font-size: 2.8rem;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -71,11 +78,6 @@
                     @include primary-box-shadow-hover(red);
                 }
             }
-            /*&--red {
-                &::after {
-                    @include primary-box-shadow-hover(red); 
-                }
-            }*/
         }
     }
     &:active {

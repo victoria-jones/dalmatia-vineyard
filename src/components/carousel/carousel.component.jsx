@@ -18,7 +18,6 @@ const Carousel = ({ children, carouselClass, carouselImages }) => {
     //used to set the interval
     let autoSlide;
 
-    //new test carousel 
 
     //start the auto carousel on page load
     useEffect(() => {

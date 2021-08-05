@@ -25,6 +25,10 @@
     &__side {
         width: 50%;
 
+        @include respond(tab-land) {
+            width: 100%;
+        }
+
         &--1 {
             max-width: 40rem;
 
@@ -42,6 +46,10 @@
 
     &__text {
         margin-bottom: 5rem;
+
+        @include respond(small-phone) {
+            padding: 0 2rem;
+        }
     }
 
     &__p {

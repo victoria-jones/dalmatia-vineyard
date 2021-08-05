@@ -16,8 +16,11 @@
         }
 
         @include respond(phone) {
-            grid-template-columns: repeat(2, 15rem);
-            grid-template-rows: repeat(3, 15rem);
+            //grid-template-columns: repeat(2, 15rem);
+            //grid-template-rows: repeat(3, 15rem);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         &__box {
@@ -36,6 +39,11 @@
                 background-color: $color-secondary-red-dark;
                 color: $color-white;
                 fill: $color-white;
+            }
+
+            @include respond(phone) {
+                width: 15rem;
+                height: 15rem;
             }
 
             &__image {
