@@ -12,7 +12,7 @@ import './homepage.styles.scss';
 import backgroundImage from '../../assets/hero-background.jpg';
 
 const HomePage = () => (
-    <div className='homepage'>
+    <div className='homepage main-content'>
         <BackgroundImage image={backgroundImage} />
         <Hero />
         <EventPlanning />

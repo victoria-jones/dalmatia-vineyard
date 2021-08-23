@@ -1,0 +1,57 @@
+@import '../../sassStyles/main.scss';
+
+.aboutpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__the-vineyard {
+        width: 100%;
+
+        &__sec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+
+            &--text {
+                width: 55%;
+                text-align: left;
+            }
+
+            &--picture {
+                background-color: grey;
+                width: 35%;
+                height: 25rem;
+            }
+        }
+    }
+
+    &__gallery {
+        width: 100%;
+        &--wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        &__side {
+            width: 50%;
+
+            &--1 {
+                max-width: 40rem;
+            }
+            &--2 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &--p {
+            text-align: left;
+        }
+    }
+}
