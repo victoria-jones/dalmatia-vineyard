@@ -3,6 +3,7 @@ import React from 'react';
 import BackgroundImage from '../../components/background-image/background-image.component';
 import StyledHeading from '../../components/styled-heading/styled-heading.component';
 import PhotoGallery from '../../components/photo-gallery/photo-gallery.component'; 
+import ParagraphHeading from '../../components/paragraph-heading/paragraph-heading.component';
 
 import './aboutpage.styles.scss';
 
@@ -62,7 +63,12 @@ const AboutPage = () => {
             <section className="aboutpage__the-vineyard">
                 <div className="aboutpage__the-vineyard__sec aboutpage__the-vineyard__sec--1">
                     <div className="aboutpage__the-vineyard__sec--text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corrupti, aliquid velit aspernatur expedita tempora recusandae a reiciendis ut repellendus fugit, doloribus exercitationem? Molestias eveniet vero eius eaque quasi laudantium.
+                        <ParagraphHeading 
+                            title="Lorem ipsum dolor sit amet,"
+                        />
+                        <p>
+                        consectetur adipisicing elit. Aliquam corrupti, aliquid velit aspernatur expedita tempora recusandae a reiciendis ut repellendus fugit, doloribus exercitationem? Molestias eveniet vero eius eaque quasi laudantium.   
+                        </p>
                     </div>
                     <div className="aboutpage__the-vineyard__sec--picture">
                         picture
@@ -74,13 +80,23 @@ const AboutPage = () => {
                         picture  
                     </div>
                     <div className="aboutpage__the-vineyard__sec--text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta aut perspiciatis sint eveniet quia sapiente illo quas ipsa quo. Nobis harum fuga sit molestiae id deserunt ex ducimus? Unde, ipsam!
+                        <ParagraphHeading 
+                            title="Lorem ipsum,"
+                        />
+                        <p>
+                            dolor sit amet consectetur adipisicing elit. Dicta aut perspiciatis sint eveniet quia sapiente illo quas ipsa quo. Nobis harum fuga sit molestiae id deserunt ex ducimus? Unde, ipsam!
+                        </p>
                     </div>
                 </div>
 
                 <div className="aboutpage__the-vineyard__sec aboutpage__the-vineyard__sec--3">
                     <div className="aboutpage__the-vineyard__sec--text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque ullam quas beatae! Odio, similique earum? Dolor quaerat quam iusto placeat quae nemo! Itaque, libero tempore eum reprehenderit autem sapiente?
+                        <ParagraphHeading 
+                            title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        />
+                        <p>
+                            Exercitationem cumque ullam quas beatae! Odio, similique earum? Dolor quaerat quam iusto placeat quae nemo! Itaque, libero tempore eum reprehenderit autem sapiente?
+                        </p>
                     </div>
                     <div className="aboutpage__the-vineyard__sec--picture">
                         picture     

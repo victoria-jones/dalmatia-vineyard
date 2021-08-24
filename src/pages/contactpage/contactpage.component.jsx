@@ -22,7 +22,11 @@ const ContactPage = () => (
             </p>
         </div>
         <div className="contactpage__contact-form">
-            <CustomForm />
+            <CustomForm 
+                subheading="let's get in touch"
+                heading="contact us"
+                text="send us your questions, comments, and inquiries"
+            />
         </div>
     </div>
 );

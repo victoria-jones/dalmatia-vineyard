@@ -8,7 +8,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import corks from '../../assets/corks.jpg';
 
-const CustomForm = () => (
+const CustomForm = ({ subheading, heading, text }) => (
     <section className="custom-form section-padding">
         <ImageBoxBordered
             backgroundImage={corks}
@@ -43,9 +43,9 @@ const CustomForm = () => (
 
             <div className="custom-form__heading">
                 <StyledHeading
-                    subheading="customize"
-                    heading="your own event"
-                    text="contact us with some details on your event and our event planner will get in touch" 
+                    subheading={subheading}
+                    heading={heading}
+                    text={text}
                 />
             </div>
         </ImageBoxBordered>

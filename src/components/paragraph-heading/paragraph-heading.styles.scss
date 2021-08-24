@@ -1,0 +1,16 @@
+@import '../../sassStyles/main.scss';
+
+.paragraph-heading {
+    &--wrapper {
+        margin-bottom: 2rem;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 8rem;
+            height: .2rem;
+            background-color: $color-primary-red;
+            margin-top: .5rem;
+        }
+    }   
+}

@@ -17,7 +17,11 @@ const HomePage = () => (
         <Hero />
         <EventPlanning />
         <WeddingsAndEvents />
-        <CustomForm /> 
+        <CustomForm 
+            subheading="customize"
+            heading="your own event"
+            text="contact us with some details on your event and our event planner will get in touch"
+        /> 
         <Gallery />
     </div>
 );
