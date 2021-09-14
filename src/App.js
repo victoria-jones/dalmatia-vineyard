@@ -6,6 +6,7 @@ import AboutPage from './pages/aboutpage/aboutpage.component';
 import EventsPage from './pages/eventspage/eventspage.component';
 import WineExperiencePage from './pages/wine-experiencepage/wine-experiencepage.component';
 import ContactPage from './pages/contactpage/contactpage.component';
+import BookingPage from './pages/bookingpage/bookingpage.component';
 
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
@@ -21,7 +22,8 @@ function App() {
           <Route path='/about' component={AboutPage}/>
           <Route path='/events' component={EventsPage}/>
           <Route path='/wine_experience' component={WineExperiencePage}/>
-          <Route path='/contact' component={ContactPage}/>
+          <Route exact path='/contact' component={ContactPage}/>
+          <Route path='/contact/booking' component={BookingPage}/>
           <Route component={NotFound} />
         </Switch>
 

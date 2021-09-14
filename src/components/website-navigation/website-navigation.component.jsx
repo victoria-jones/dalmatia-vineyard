@@ -14,8 +14,22 @@ const WebsiteNavigation = ({ navClass }) => {
 
     //check react router for current location
     useEffect(() => {
+        const removeSubpath = /^\/.+?(?=\/)/;
+        const getParentPath = (path) => {
+            //check if subpath or direct path
+                //remove subpath if there is one
+            if(path.includes("/", 2)) {
+                const pathMatch = path.match(removeSubpath);
+                setCurrentLocation(pathMatch[0]);
+            } else {
+                setCurrentLocation(path);
+            }
+        }
+
+        //get current location path
+        getParentPath(location.pathname);
         //set current page path
-        setCurrentLocation(location.pathname);
+        /*setCurrentLocation(location.pathname);*/
     }, [location]);
 
     //update link underline and diamond after currentLocation is set

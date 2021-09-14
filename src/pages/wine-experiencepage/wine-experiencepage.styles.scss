@@ -1,0 +1,95 @@
+@import '../../sassStyles/main.scss';
+
+.wine-experiencepage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__section {
+        text-align: left;
+        margin: 5rem 0;
+
+        min-height: 30rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:last-child) {
+            //margin-bottom: 5rem;
+        }     
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: row;
+
+        &--image {
+            background-color: grey;
+            width: 45rem;
+            margin-left: 2rem;
+            height: 30rem;
+        }
+    }
+
+    &__tasting-and-pairings {
+
+        &__content {
+            display: flex;
+            align-items: center;
+        }
+        
+        &--image {
+            background-color: grey;
+            width: 45rem;
+            margin-left: 2rem;
+            height: 30rem;
+        }
+    }
+
+    &__wine-blendings {
+        //add background image to the section
+
+    }
+
+    &__custom-bottles {
+
+        &__sec {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+
+            &--text {
+                width: 55%;
+                text-align: left;
+            }
+
+            &--picture {
+                background-color: grey;
+                width: 45rem;
+                //height: 25rem;
+                height: 30rem;
+            }
+
+            &--2 {
+                &--picture {
+                    order: -1;
+                    margin-right: 2rem;
+                }
+            }
+
+            &--1,
+            &--3 {
+                &--picture {
+                    margin-left: 2rem;
+                }
+            }
+        }
+        
+    }
+}

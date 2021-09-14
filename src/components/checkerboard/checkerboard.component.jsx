@@ -30,17 +30,19 @@ const Checkerboard = ({ checkerboardClass, checkerboardTitles }) => {
                 {checkerboardTitles.map((title) => {
                     const SelectedImage = boxImages[checkerboardTitles.indexOf(title)];
                     
-                    return (<div 
-                        className={`checkerboard__grid__box checkboard__grid__box--${checkerboardTitles.indexOf(title)}`}
-                        key={checkerboardTitles.indexOf(title)}
-                    >
-                        <SelectedImage
-                            className={`checkerboard__grid__box__image checkerboard__grid__box__image--${checkerboardTitles.indexOf(title)}`} 
-                        />
-                        <StyledSecondaryHeading secondaryHeadingClass="checkerboard__grid__box__title">
-                            {title}
-                        </StyledSecondaryHeading>
-                    </div> )
+                    return (
+                        <div 
+                            className={`checkerboard__grid__box checkboard__grid__box--${checkerboardTitles.indexOf(title)}`}
+                            key={checkerboardTitles.indexOf(title)}
+                        >
+                            <SelectedImage
+                                className={`checkerboard__grid__box__image checkerboard__grid__box__image--${checkerboardTitles.indexOf(title)}`} 
+                            />
+                            <StyledSecondaryHeading secondaryHeadingClass="checkerboard__grid__box__title">
+                                {title}
+                            </StyledSecondaryHeading>
+                        </div> 
+                    )
                 })}
             </div>
         </section>

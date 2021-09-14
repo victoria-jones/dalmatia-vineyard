@@ -33,7 +33,7 @@ const Header = () => {
             <header className="header">
                 <Logo logoClass="header__logo"/>
                 <WebsiteNavigation navClass="header__nav" />
-                <CustomButton white link="contact" buttonClass="header__button">booking</CustomButton>
+                <CustomButton white link="contact/booking" buttonClass="header__button">booking</CustomButton>
             </header> 
         );
     } else {
