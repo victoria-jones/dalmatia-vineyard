@@ -9,6 +9,13 @@
         max-width: 70rem;
         margin-bottom: -10rem;
 
+        display: relative;
+        z-index: 1;
+
+        @include respond (tab-port) {
+            margin-bottom: -5rem;
+        }
+
         &--p {
             text-align: left;
         }

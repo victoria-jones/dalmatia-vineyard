@@ -60,7 +60,7 @@ const AboutPage = () => {
                 styledHeadingClass="aboutpage__title"
             />
 
-            <section className="aboutpage__the-vineyard">
+            <section className="aboutpage__the-vineyard wrapper-width">
                 <div className="aboutpage__the-vineyard__sec aboutpage__the-vineyard__sec--1">
                     <div className="aboutpage__the-vineyard__sec--text">
                         <ParagraphHeading 
@@ -104,7 +104,7 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            <section className="aboutpage__gallery section-padding">
+            <section className="aboutpage__gallery section-padding wrapper-width">
                 <div className="aboutpage__gallery--wrapper">
                     <div className="aboutpage__gallery__side aboutpage__gallery__side--1">
                         <div className="aboutpage__gallery--heading">
@@ -128,7 +128,7 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            <section className="aboutpage__what-dalmatia-does">
+            <section className="aboutpage__what-dalmatia-does wrapper-width">
                 what dalmatia does area
             </section>
         </div>

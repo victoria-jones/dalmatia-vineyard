@@ -26,7 +26,13 @@
         width: calc(100% - 3rem);
         height: calc(100% - 3rem);
         @include borderStyle(white);
+
+        &--red {
+            @include borderStyle(red);
+        }
     }
+
+
 
     &__image-holder {
         width: 100%;

@@ -4,6 +4,7 @@ import StyledHeading from '../../components/styled-heading/styled-heading.compon
 import BackgroundImage from '../../components/background-image/background-image.component';
 import ParagraphHeading from '../../components/paragraph-heading/paragraph-heading.component';
 import CustomList from '../../components/custom-list/custom-list.component';
+import LionBackground from '../../components/lion-background/lion-background.component';
 
 import './wine-experiencepage.styles.scss';
 
@@ -62,10 +63,12 @@ const WineExperiencePage = () => (
         </section>
 
         <section className="wine-experiencepage__wine-blendings wine-experiencepage__section">
-            <StyledHeading 
-                heading="wine blendings"
-                text="create or try wine blendings specialized for your palate & take home a bottle of your custom blend"
-            />
+            <LionBackground lionBackgroundClass="wine-experiencepage__wine-blendings--wrapper wrapper-width">
+                <StyledHeading 
+                    heading="wine blendings"
+                    text="create or try wine blendings specialized for your palate & take home a bottle of your custom blend"
+                />
+            </LionBackground>
         </section>
 
         <section className="wine-experiencepage__custom-bottles wine-experiencepage__section">

@@ -18,7 +18,7 @@ const Footer = () => (
                     <h3 className="footer__nav__section--header footer__nav__section--header--1 header-style header-style--1">Quick links</h3>
                     <ul className="footer__nav__list">
                         <li className="footer__nav__item"><Link className="footer__nav__link" to="/about">about us</Link></li>
-                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/contact">booking</Link></li>
+                        <li className="footer__nav__item"><Link className="footer__nav__link" to="/contact/booking">booking</Link></li>
                         <li className="footer__nav__item"><Link className="footer__nav__link" to="/">FAQ</Link></li>
                     </ul>
                 </div>

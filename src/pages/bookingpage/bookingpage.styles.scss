@@ -4,4 +4,45 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    &__text {
+        text-align: left;
+    }
+
+    &__booking-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: $color-white;
+        margin: 5rem 0 15rem 0;
+
+        @include primary-box-shadow;
+
+        &--wrapper {
+            width: calc(100% - 3rem);
+            height: calc(100% - 3rem);
+            @include borderStyle(red);
+            padding: 5rem 10rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__form {
+            max-width: 50rem;
+        }
+
+        &__input {
+            max-width: 30rem;
+
+            &--date-extend,
+            &--label-date-extend {
+                display: none;
+            }
+        }
+    }
 }

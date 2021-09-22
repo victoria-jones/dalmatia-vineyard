@@ -1,0 +1,71 @@
+@import '../../sassStyles/main.scss';
+
+.custom-input {
+    &__group {
+        text-align: left;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__label {
+        transition: all .5s;
+        margin-left: 1.5rem;
+        display: block;
+    }
+
+    &__input,
+    &__message {
+        padding: .8rem 1.5rem;
+        border: none;
+        width: 90%;
+        display: block;
+        transition: all .1s;
+        color: grey;
+        font-family: inherit;
+        font-size: 1.5rem;
+
+        @include primary-box-shadow;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: .2rem solid $color-primary-red;
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &:-moz-placeholder {
+            color: grey;
+        }
+    }
+
+    &__message {
+        height: 10rem;
+        @include respond(phone) {
+            height: 20rem;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 1.5rem;
+        &--wrapper {
+            display: inline-block;
+        }
+    }
+    &__label-checkbox {
+        font-weight: bold;
+    }
+
+    &__input:placeholder-shown + &__label,
+    &__message:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

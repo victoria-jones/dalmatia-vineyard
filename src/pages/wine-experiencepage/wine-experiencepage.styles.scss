@@ -49,8 +49,18 @@
     }
 
     &__wine-blendings {
-        //add background image to the section
+        width: 100%;
+        min-height: 40rem;
+        color: $color-white;
+        overflow: hidden;
 
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__custom-bottles {

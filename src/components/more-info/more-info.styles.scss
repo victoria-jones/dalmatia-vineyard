@@ -1,0 +1,61 @@
+@import '../../sassStyles/main.scss';
+
+.more-info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+    
+    position: relative;
+
+    z-index: 1;
+
+    &--wrapper {
+        background-color: $color-primary-red;
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: rotate(45deg);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $color-white;
+        transform: rotate(-45deg);
+    }
+
+    &--wrapper:hover ~ &__information,
+    &--wrapper:active ~ &__information {
+        display: block;
+    }
+
+    &__information {
+        display: none;
+        font-size: 1.2rem;
+        text-align: left;
+        width: 18rem;
+        background-color: $color-light-grey;
+        padding: 1.4rem 2rem;
+        border: .1rem solid $color-grey;
+
+        @include primary-box-shadow;
+
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+
+        z-index: -1;
+
+        &--visible {
+            display: block;
+        }
+        
+    }
+}

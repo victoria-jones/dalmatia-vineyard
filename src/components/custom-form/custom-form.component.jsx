@@ -27,7 +27,7 @@ const CustomForm = ({ subheading, heading, text }) => (
                     </div>
                     <div className="custom-form__group">
                         <textarea id="message" name="message" className="custom-form__message" placeholder="Message"></textarea>
-                        <label htmlFor="name" className="custom-form__label">Message</label>
+                        <label htmlFor="message" className="custom-form__label">Message</label>
                     </div>
                     <div className="custom-form__group">
                         <CustomButton

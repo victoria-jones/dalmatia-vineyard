@@ -47,6 +47,11 @@
         }
     }
 
+    &__form-information {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
     &__form-wrapper {
         width: 70%;
         padding-right: 3rem;
@@ -55,6 +60,29 @@
             width: 90%;
             padding: 0;
         }
+    }
+
+    &__fieldset {
+        border: none;
+        //replace with some decorative element
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                display: block;
+                width: 40%;
+                border-bottom: .2rem solid $color-primary-red;
+                padding-bottom: 5rem;
+            }
+        }
+          
+
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__legend {
+        text-align: left;
     }
 
     &__group {
