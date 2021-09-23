@@ -1,0 +1,100 @@
+@import '../../sassStyles/main.scss';
+
+.drop-down-section {
+    display: flex;
+    flex-direction: column;
+    jusify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background-color: $color-secondary-red-dark;
+
+    &--wrapper {
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: center;
+        //align-items: center;
+        width: 100%;
+        max-width: 144rem;
+
+        text-align: left;
+        color: $color-white;
+    }
+
+    &__drop-down {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &__arrow {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 3rem;
+            position: relative;
+            overflow: hidden;
+            backface-visibility: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include primary-box-shadow;
+
+            &:hover {
+                transition: all .5s;
+                cursor: pointer;
+                @include primary-box-shadow-hover(black);
+                transform: scale(1.02) translateY(-.5rem);
+            }
+            &:active {
+                @include primary-box-shadow-pressed(black);
+                transform: scale(1) translateY(.3rem);
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $color-white;
+                opacity: .5;
+            }
+
+            &--checkbox {
+                display: none;
+            }
+            &--icon {
+                margin-bottom: .4rem;
+                width: 1.7rem;
+                height: 1.7rem;
+                border-bottom: .4rem solid $color-white;
+                border-right: .4rem solid $color-white;
+                transform: rotate(45deg);
+
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &__content {
+            transition: all .5s;
+            max-height: 0rem;
+            //transform: scaleY(0);
+            opacity: 0;
+        }
+
+        //drop down functionality
+        &__arrow--checkbox:checked ~ &__content {
+            max-height: 1000rem;
+            //transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+
+
+}

@@ -137,7 +137,7 @@ const BookingPage = () => {
                                 type="checkbox"
                                 id="inclusiveThemedEvent"
                                 label="I am interested in Dalamatia's themed events"
-                                moreInfo={"Dalmatia has some preplanned event themes to choose from, or your can work with an event planner to create your own themed event. more about themed events can be found on the events page"} 
+                                moreInfo={"Dalmatia has some preplanned event themes to choose from, or you can work with an event planner to create your own themed event. more about themed events can be found on the events page"} 
                             />
                         </fieldset>
 

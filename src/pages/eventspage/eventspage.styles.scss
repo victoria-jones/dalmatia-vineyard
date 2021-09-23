@@ -1,0 +1,45 @@
+@import '../../sassStyles/main.scss';
+
+.eventspage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__events-at-dalmatia {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__side {
+            width: 50%;
+
+            &--1 {
+                max-width: 40rem;
+            }
+
+            &--2 {
+                max-width: 50rem;
+            }
+
+            &--image {
+                background-color: grey;
+                width: 100%;
+                max-width: 50rem;
+                height: 25rem;
+            }
+        }
+
+        &--p {
+            text-align: left;
+        }
+    }
+
+    &__types-of-events {
+        width: 100%;
+    }
+
+    &__inclusive-event-planning {
+        background-color: $color-white;
+    }
+}
