@@ -38,7 +38,7 @@ const CustomInput = ({ type, id, label, inputClassName, labelClassName, moreInfo
         
         case "checkbox" :
             return(
-                <div className="custom-input__group">
+                <div className="custom-input__group custom-checkbox-input__group">
                     <div className="custom-input__checkbox--wrapper">
                         <input 
                             type={type} 
@@ -46,13 +46,15 @@ const CustomInput = ({ type, id, label, inputClassName, labelClassName, moreInfo
                             name={id} 
                             className={`custom-input__checkbox ${inputClassName}`}     
                         />
+
+                        <label 
+                            htmlFor={id} 
+                            className={`custom-input__label-checkbox ${labelClassName}`}
+                        >   
+                            <div className="custom-input__checkbox--checkmark"></div>
+                            {label}
+                        </label>
                     </div>
-                    <label 
-                        htmlFor={id} 
-                        className={`custom-input__label-checkbox ${labelClassName}`}
-                    >
-                        {label}
-                    </label>
                     {
                         (moreInfo) ?
                         <MoreInfo 

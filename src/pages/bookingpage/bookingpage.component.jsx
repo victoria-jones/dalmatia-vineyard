@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import BackgroundImage from '../../components/background-image/background-image.component';
@@ -6,6 +6,7 @@ import StyledHeading from '../../components/styled-heading/styled-heading.compon
 import CustomInput from '../../components/custom-input/custom-input.component';
 import ParagraphHeading from '../../components/paragraph-heading/paragraph-heading.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import InlineLink from '../../components/inline-link/inline-link.component';
 
 import './bookingpage.styles.scss';
 
@@ -14,23 +15,18 @@ import backgroundImage from '../../assets/hero-background.jpg';
 const BookingPage = () => {
 
     //For displaying or hiding the second date picker
-    const extendedDateInput = document.getElementsByClassName("bookingpage__booking-form__input--date-extend")[0];
-    const extendedDateInputLabel = document.getElementsByClassName("bookingpage__booking-form__input--label-date-extend")[0]
+    const [extendedDatePicker, setExtendedDatePicker] = useState(false);
 
+    //if extendedDateCheckbox is checked set extendedDatePicker to true
     useEffect(() => {
         const extendDateCheckbox = document.getElementById("increasedDateRange");
 
         const handleExtendDate = () => {
-            //set css
             if(extendDateCheckbox.checked) {
-                extendedDateInput.style.display = "block";
-                extendedDateInputLabel.style.display = "block";      
-                console.log('checkbox was checked');
+                setExtendedDatePicker(true);    
                 
             } else {
-                extendedDateInput.style.display = "none";
-                extendedDateInputLabel.style.display = "none";
-                console.log('checkbox was unchecked');
+                setExtendedDatePicker(false);
                 
             }
         }
@@ -40,8 +36,8 @@ const BookingPage = () => {
 
         //cleanup
         return () => extendDateCheckbox.removeEventListener("change", handleExtendDate);
+    
     },[]);
-
 
     return (
         <div className="bookingpage main-content">
@@ -51,11 +47,11 @@ const BookingPage = () => {
                 styledHeadingClass="bookingpage__title"
             />
 
-            <div className="bookingpage__text wrapper-width-condensed">
+            <div className="bookingpage__text">
                 <p className="bookingpage__text--p">
                     Fill out the booking form with your information and an event specialist will get back to you to discuss your event.
                     No dates are guaranteed until an event specialist speaks to you about your event.
-                    You can also contact us directly by phone:
+                    You can also contact us directly by phone: 
                     <span className="bookingpage__text--phone">(555) 555 - 5555</span>
                 </p>
             </div>
@@ -100,16 +96,26 @@ const BookingPage = () => {
                                 id="increasedDateRange"
                                 label="My event will last more than 1 day" 
                                 inputClassName="bookingpage__booking-form__checkbox"
-                                moreInfo={"if your event will span more than one day check this box to select how many days your event will be"}
+                                moreInfo="if your event will span more than one day check this box to select how many days your event will be"
                             />
 
-                            <CustomInput
-                                type="number"
-                                id="eventLength"
-                                label="# of Days of Event" 
-                                inputClassName="bookingpage__booking-form__input bookingpage__booking-form__input--date-extend"
-                                labelClassName="bookingpage__booking-form__input--label-date-extend"
-                            />
+                            {
+                                extendedDatePicker ?
+
+                                <CustomInput
+                                    type="number"
+                                    id="eventLength"
+                                    label="# of Days of Event" 
+                                    inputClassName="bookingpage__booking-form__input bookingpage__booking-form__input--date-extend"
+                                    labelClassName="bookingpage__booking-form__input--label-date-extend"
+                                />
+
+                                :
+
+                                null
+
+                            }
+                            
 
                             <CustomInput
                                 type="number"
@@ -126,7 +132,7 @@ const BookingPage = () => {
                                 <p className="custom-form__form-information">
                                     Dalamatia has optional all inclusive event planning.
                                     This can include: Dalmatia provided event planner, catering, photography, themed events (theme options are available), custom wine bottle designs or other take home souvenirs.
-                                    Learn more about Dalmatia's inclusive event planning on the <Link to="/events">events page</Link>.
+                                    Learn more about Dalmatia's inclusive event planning on the <InlineLink linkTo="/events">events page</InlineLink>.
                                 </p>
                             <CustomInput
                                 type="checkbox"

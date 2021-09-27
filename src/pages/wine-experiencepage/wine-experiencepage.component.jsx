@@ -63,7 +63,7 @@ const WineExperiencePage = () => (
         </section>
 
         <section className="wine-experiencepage__wine-blendings wine-experiencepage__section">
-            <LionBackground lionBackgroundClass="wine-experiencepage__wine-blendings--wrapper wrapper-width">
+            <LionBackground lionBackgroundClass="wine-experiencepage__wine-blendings--wrapper">
                 <StyledHeading 
                     heading="wine blendings"
                     text="create or try wine blendings specialized for your palate & take home a bottle of your custom blend"

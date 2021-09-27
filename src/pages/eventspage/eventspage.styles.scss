@@ -7,26 +7,49 @@
 
     &__events-at-dalmatia {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
         width: 100%;
+
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respond(tab-land) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
         &__side {
             width: 50%;
 
+            @include respond(tab-land) {
+                width: 100%;
+            }
+    
             &--1 {
                 max-width: 40rem;
+    
+                @include respond(tab-land) {
+                    margin-bottom: 5rem;
+                }
             }
 
             &--2 {
-                max-width: 50rem;
+                max-width: 60rem;
+
+                @include respond(tab-land) {
+                    display: flex;
+                    flex-direction: center;
+                }
             }
 
             &--image {
                 background-color: grey;
                 width: 100%;
-                max-width: 50rem;
-                height: 25rem;
+                //max-width: 60rem;
+                height: 40rem;
             }
         }
 

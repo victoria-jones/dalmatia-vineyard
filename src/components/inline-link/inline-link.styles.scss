@@ -1,0 +1,48 @@
+@import '../../sassStyles/main.scss';
+
+.inlineLink {
+    display: inline-block;
+
+    &:hover {
+        transform: translateY(-.5rem);
+    }
+    &:active {
+        transform: translateY(0);
+    }
+
+    &__link,
+    &__link:visited {
+        color: $color-black;
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            height: .1rem;
+            background-color: $color-primary-red;
+        }
+
+        &:hover {
+            color: $color-primary-red;
+            
+            &::after {
+                width: 50%;
+                background-color: $color-primary-red;
+            }
+        }
+
+        &:active {
+            color: $color-primary-red;
+        }
+    }
+}
+
+.inlineLink,
+.inlineLink__link,
+.inlineLink__link::after {
+    transition: all .3s;
+}

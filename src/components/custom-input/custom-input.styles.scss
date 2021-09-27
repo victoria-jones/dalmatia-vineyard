@@ -53,13 +53,54 @@
     }
 
     &__checkbox {
-        margin-right: 1.5rem;
+        //margin-right: 1.5rem;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
         &--wrapper {
             display: inline-block;
+            
+        }
+
+        &--checkmark {
+            position: relative;
+            display: inline-block;
+            vertical-align: text-top;
+            margin-right: 1.2rem;
+
+            height: 2rem;
+            width: 2rem;
+            background-color: $color-white;
+            border: solid .2rem $color-primary-red;
+
+            &:hover {
+                background-color: $color-secondary-red-light;
+            }
+
+            &::after {
+                content: "\2713";
+                position: absolute;
+                top: -1.6rem;
+                color: $color-primary-red;
+                font-size: 2.8rem;
+
+                opacity: 0;
+            }
+        }
+
+        &--checkmark,
+        &--checkmark::after {
+            transition: all .2s;
         }
     }
     &__label-checkbox {
         font-weight: bold;
+        cursor: pointer;
+    }
+
+    &__checkbox:checked ~ &__label-checkbox &__checkbox--checkmark::after {
+        opacity: 1;
     }
 
     &__input:placeholder-shown + &__label,
