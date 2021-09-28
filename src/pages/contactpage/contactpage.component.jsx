@@ -15,7 +15,7 @@ const ContactPage = () => (
         <BackgroundImage image={backgroundImage} />
         <StyledHeading 
             heading="Contact Us"
-            styledHeadingClass="contactpage__title"
+            styledHeadingClass="contactpage__title page-title"
         />
 
         <div className="contactpage__text">

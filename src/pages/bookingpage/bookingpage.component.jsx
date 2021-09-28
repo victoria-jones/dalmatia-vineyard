@@ -44,7 +44,7 @@ const BookingPage = () => {
             <BackgroundImage image={backgroundImage} />
             <StyledHeading 
                 heading="Booking"
-                styledHeadingClass="bookingpage__title"
+                styledHeadingClass="bookingpage__title page-title"
             />
 
             <div className="bookingpage__text">

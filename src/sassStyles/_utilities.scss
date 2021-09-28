@@ -23,3 +23,9 @@
     width: 100%;
     max-width: 100rem;
 }
+
+.page-title {
+    @include respond(tab-port) {
+        margin-top: 9rem;
+    }
+}

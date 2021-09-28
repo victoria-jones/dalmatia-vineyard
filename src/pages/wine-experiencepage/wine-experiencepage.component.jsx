@@ -15,7 +15,7 @@ const WineExperiencePage = () => (
         <BackgroundImage image={backgroundImage} />
         <StyledHeading 
             heading="Wine Experience"
-            styledHeadingClass="wine-experiencepage__title"
+            styledHeadingClass="wine-experiencepage__title page-title"
         />
 
         <section className="wine-experiencepage__about wine-experiencepage__section">

@@ -14,22 +14,27 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-
-        &:not(:last-child) {
-            //margin-bottom: 5rem;
-        }     
+        align-items: center;    
     }
 
     &__about {
         display: flex;
         flex-direction: row;
 
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
         &--image {
             background-color: grey;
             width: 45rem;
             margin-left: 2rem;
             height: 30rem;
+
+            @include respond(phone) {
+                width: 100%;
+                margin-left: 0;
+            }
         }
     }
 
@@ -38,6 +43,10 @@
         &__content {
             display: flex;
             align-items: center;
+
+            @include respond(phone) {
+                flex-direction: column;
+            }
         }
         
         &--image {
@@ -45,6 +54,11 @@
             width: 45rem;
             margin-left: 2rem;
             height: 30rem;
+
+            @include respond(phone) {
+                width: 100%;
+                margin-left: 0;
+            }
         }
     }
 
@@ -70,6 +84,10 @@
             align-items: center;
             justify-content: center;
 
+            @include respond(phone) {
+                flex-direction: column;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 5rem;
             }
@@ -77,6 +95,11 @@
             &--text {
                 width: 55%;
                 text-align: left;
+
+                @include respond(phone) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
             }
 
             &--picture {
@@ -84,12 +107,21 @@
                 width: 45rem;
                 //height: 25rem;
                 height: 30rem;
+
+                @include respond(phone) {
+                    width: 100%;
+                }
             }
 
             &--2 {
                 &--picture {
                     order: -1;
                     margin-right: 2rem;
+
+                    @include respond(phone) {
+                        order: 2;
+                        margin-right: 0;
+                    }
                 }
             }
 
@@ -97,6 +129,10 @@
             &--3 {
                 &--picture {
                     margin-left: 2rem;
+
+                    @include respond(phone) {
+                        margin-left: 0;
+                    }
                 }
             }
         }

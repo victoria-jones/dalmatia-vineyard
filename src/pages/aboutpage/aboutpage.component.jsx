@@ -57,7 +57,7 @@ const AboutPage = () => {
             <BackgroundImage image={backgroundImage} />
             <StyledHeading 
                 heading="About Dalmatia"
-                styledHeadingClass="aboutpage__title"
+                styledHeadingClass="aboutpage__title page-title"
             />
 
             <section className="aboutpage__the-vineyard wrapper-width">
@@ -79,7 +79,7 @@ const AboutPage = () => {
                     <div className="aboutpage__the-vineyard__sec--picture">
                         picture  
                     </div>
-                    <div className="aboutpage__the-vineyard__sec--text">
+                    <div className="aboutpage__the-vineyard__sec--text aboutpage__the-vineyard__sec--2--text">
                         <ParagraphHeading 
                             title="Lorem ipsum,"
                         />

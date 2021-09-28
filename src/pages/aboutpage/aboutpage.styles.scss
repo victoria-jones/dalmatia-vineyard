@@ -13,6 +13,16 @@
             justify-content: space-around;
             align-items: center;
 
+            @include respond(phone) {
+                flex-direction: column;
+
+                &--2 {
+                    &--text {
+                        order: -1;
+                    }
+                }
+            }
+
             &:not(:last-child) {
                 margin-bottom: 5rem;
             }
@@ -20,29 +30,52 @@
             &--text {
                 width: 55%;
                 text-align: left;
+
+                @include respond(phone) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
             }
 
             &--picture {
                 background-color: grey;
                 width: 35%;
                 height: 25rem;
+
+                @include respond(phone) {
+                    width: 100%;
+                }
             }
         }
     }
 
     &__gallery {
         width: 100%;
+
         &--wrapper {
             display: flex;
             justify-content: space-around;
             align-items: center;
+
+            @include respond(tab-land) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         &__side {
             width: 50%;
 
+            @include respond(tab-land) {
+                width: 100%;
+            }
+
             &--1 {
                 max-width: 40rem;
+
+                @include respond(tab-land) {
+                    margin-bottom: 5rem;
+                }
             }
             &--2 {
                 display: flex;

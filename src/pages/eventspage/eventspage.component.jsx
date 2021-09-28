@@ -14,7 +14,7 @@ const EventsPage = () => (
         <BackgroundImage image={backgroundImage} />
         <StyledHeading 
             heading="Events at Dalmatia"
-            styledHeadingClass="eventspage__title"
+            styledHeadingClass="eventspage__title page-title"
         />
 
         <section className="eventspage__events-at-dalmatia sub-section-padding">
