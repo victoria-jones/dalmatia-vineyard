@@ -18,7 +18,7 @@
     &__cards {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @include respond(tab-port) {
             flex-direction: column;

@@ -44,7 +44,7 @@ const WeddingsAndEvents = () => {
                 </div>
                 <CustomButton 
                     red 
-                    link=""
+                    link="events"
                     buttonClass="weddings-and-events__button"
                 > 
                     learn more

@@ -7,9 +7,12 @@ import './drop-down-section.styles.scss';
 const DropDownSection = ({ sectionClass, children, backgroundImage, title, synapse, arrowId }) => (
     <section className={`drop-down-section
         ${ sectionClass ? sectionClass : ''}
-    `}
+        `}
+        style={{
+            backgroundImage: `url(${backgroundImage})`
+        }}
     >
-        <div className="drop-down-section--wrapper sub-section-padding">
+        <div className="drop-down-section--wrapper section-padding">
             <ParagraphHeading
                 title={title}
             />
