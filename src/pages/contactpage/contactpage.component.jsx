@@ -18,7 +18,7 @@ const ContactPage = () => (
             styledHeadingClass="contactpage__title page-title"
         />
 
-        <div className="contactpage__text  wrapper-width">
+        <div className="contactpage__text page-intro-wrapper">
             <p className="contactpage__text--p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium unde quaerat neque. Iure aliquam veritatis maiores quia recusandae ipsam voluptates!
                 If you are interested in booking an event visit out <InlineLink linkTo="/contact/booking">booking page</InlineLink>.

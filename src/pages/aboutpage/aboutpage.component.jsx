@@ -111,7 +111,7 @@ const AboutPage = () => {
                             <StyledHeading
                                 subheading="secluded"
                                 heading="vineyard estate"
-                                text="for a private event surrounded by nature"
+                                text="for a private event surrounded by nature and wine"
                             />
                         </div>
 
@@ -129,7 +129,9 @@ const AboutPage = () => {
             </section>
 
             <section className="aboutpage__what-dalmatia-does wrapper-width">
-                what dalmatia does area
+                <div className="aboutpage__what-dalmatia-does--wrapper sub-section-padding">
+                    what dalmatia does area
+                </div>
             </section>
         </div>
     );

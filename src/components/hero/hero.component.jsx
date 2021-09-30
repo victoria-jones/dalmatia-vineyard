@@ -14,6 +14,8 @@ import carouselImage_02 from '../../assets/carousel/vineyard-carousel_02.jpg';
 import carouselImage_03 from '../../assets/carousel/vineyard-carousel_03.jpg';
 import carouselImage_04 from '../../assets/carousel/vineyard-carousel_04.jpg';
 
+import dalmatiaSeal from '../../assets/logo/dalmatia-seal_200px.png';
+
 const Hero = () => {
     const carouselImages = [
         carouselImage_01,
@@ -31,7 +33,9 @@ const Hero = () => {
                 >
                     <div className="carousel__container hero__carousel--container">
                         <div className="hero__header">
-                            <div className="hero__header--logo-img"></div>
+                            <div className="hero__header--logo-img">
+                                <img src={dalmatiaSeal} alt="dalmatia seal" className="hero__header--logo-img--image" />
+                            </div>
                             <h1 className="hero__header--logo logo-font">Dalmatia</h1>
                             <h2 className="hero__header--subhead header-font">Vineyard Estate</h2>
                         </div>

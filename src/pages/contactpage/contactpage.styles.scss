@@ -6,13 +6,13 @@
     align-items: center;
 
     &__text {
-        max-width: 70rem;
+        //max-width: 70rem;
         margin-bottom: -10rem;
 
         display: relative;
         z-index: 1;
 
-        @include respond (tab-port) {
+        @include respond (tab-land) {
             margin-bottom: -5rem;
         }
 

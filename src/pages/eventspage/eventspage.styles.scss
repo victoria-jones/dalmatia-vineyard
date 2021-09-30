@@ -65,4 +65,13 @@
     &__inclusive-event-planning {
         background-color: $color-white;
     }
+
+    &__booking {
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }

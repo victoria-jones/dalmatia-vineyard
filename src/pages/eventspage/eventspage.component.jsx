@@ -4,6 +4,7 @@ import BackgroundImage from '../../components/background-image/background-image.
 import StyledHeading from '../../components/styled-heading/styled-heading.component';
 import DropDownSection from '../../components/drop-down-section/drop-down-section.component';
 import EventPlanning from '../../components/event-planning/event-planning.component';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 import './eventspage.styles.scss';
 
@@ -51,6 +52,10 @@ const EventsPage = () => {
                 </div>    
             </section>
 
+            <section className="eventspage__inclusive-event-planning wrapper-width">
+                <EventPlanning />
+            </section>
+
             <section className="eventspage__types-of-events">
                 <DropDownSection 
                     sectionClass="eventspage__types-of-events__drop-section eventspage__types-of-events__drop-section--weddings"
@@ -90,12 +95,20 @@ const EventsPage = () => {
                 </DropDownSection>
             </section>
 
-            <section className="eventspage__inclusive-event-planning wrapper-width">
-                <EventPlanning />
-            </section>
-
             <section className="eventspage__booking wrapper-width">
-                book at event with dalmatia
+                <div className="eventspage__booking--wrapper section-padding">
+                    <StyledHeading
+                        subheading="online"
+                        heading="Booking"
+                        text="send your event request through Dalmatia's online booking"
+                    />
+                    <CustomButton
+                        red
+                        link="contact/booking"
+                    >
+                        book an event
+                    </CustomButton>
+                </div>
             </section>
         </div>
     );

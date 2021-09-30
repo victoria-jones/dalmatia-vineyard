@@ -47,7 +47,7 @@ const BookingPage = () => {
                 styledHeadingClass="bookingpage__title page-title"
             />
 
-            <div className="bookingpage__text">
+            <div className="bookingpage__text page-intro-wrapper">
                 <p className="bookingpage__text--p">
                     Fill out the booking form with your information and an event specialist will get back to you to discuss your event.
                     No dates are guaranteed until an event specialist speaks to you about your event.

@@ -3,10 +3,20 @@
 .logo {
     width: 8rem;
     height: 8rem;
-    background-color: $color-primary-red;
+    //background-color: $color-primary-red;
 
     @include respond(tab-port) {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
+
+        &__image {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    &__image {
+        width: 8rem;
+        height: 8rem;
     }
 }

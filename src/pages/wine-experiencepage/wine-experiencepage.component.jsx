@@ -108,7 +108,7 @@ const WineExperiencePage = () => (
                 <div className="wine-experiencepage__custom-bottles__sec wine-experiencepage__custom-bottles__sec--3">
                     <div className="wine-experiencepage__custom-bottles__sec--text wine-experiencepage__custom-bottles__sec--3--text">
                         <ParagraphHeading 
-                            title="Personalize other items with your personal design,"
+                            title="Personalize other items with your design,"
                         />
                         <p>
                             consectetur adipisicing elit. Aliquam corrupti, aliquid velit aspernatur expedita tempora recusandae a reiciendis ut repellendus fugit, doloribus exercitationem? Molestias eveniet vero eius eaque quasi laudantium.   

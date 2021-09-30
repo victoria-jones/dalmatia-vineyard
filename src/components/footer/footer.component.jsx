@@ -3,13 +3,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LionBackground from '../lion-background/lion-background.component';
 
+import dalmatiaSeal from '../../assets/logo/dalmatia-seal_100px.png';
+
 import './footer.styles.scss';
 
 const Footer = () => (
     <footer className="footer lion-background section-padding">
         <LionBackground lionBackgroundClass="footer--wrapper wrapper-width">
             <div className="footer__logo-wrapper">
-                <div className="footer__logo-image"></div>
+                <div className="footer__logo-image">
+                    <img src={dalmatiaSeal} alt="dalmatia seal" className="footer__logo-image--image" />
+                </div>
                 <h3 className="footer__logo-text">Dalmatia</h3>
             </div>
 
