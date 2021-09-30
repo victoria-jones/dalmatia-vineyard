@@ -38,6 +38,14 @@
         }
     }
 
+    &__wine-blendings {
+        &--wrapper {
+            & > * {
+                width: 90%;
+            }
+        }
+    }
+
     &__tasting-and-pairings {
 
         &__content {

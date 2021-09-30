@@ -18,13 +18,13 @@ const ContactPage = () => (
             styledHeadingClass="contactpage__title page-title"
         />
 
-        <div className="contactpage__text">
+        <div className="contactpage__text  wrapper-width">
             <p className="contactpage__text--p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium unde quaerat neque. Iure aliquam veritatis maiores quia recusandae ipsam voluptates!
                 If you are interested in booking an event visit out <InlineLink linkTo="/contact/booking">booking page</InlineLink>.
             </p>
         </div>
-        <div className="contactpage__contact-form wrapper-width">
+        <div className="contactpage__contact-form">
             <CustomForm 
                 subheading="let's get in touch"
                 heading="contact us"

@@ -15,6 +15,7 @@
     &--wrapper {
         display: flex;
         justify-content: space-between;
+        width: 90%;
 
         @include respond(tab-land) {
             flex-direction: column;

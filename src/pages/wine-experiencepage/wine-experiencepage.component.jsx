@@ -18,7 +18,7 @@ const WineExperiencePage = () => (
             styledHeadingClass="wine-experiencepage__title page-title"
         />
 
-        <section className="wine-experiencepage__about wine-experiencepage__section">
+        <section className="wine-experiencepage__about wine-experiencepage__section wrapper-width">
             <div className="wine-experiencepage__about--side wine-experiencepage__about--text">
                 <ParagraphHeading 
                     title="About the Wine Experience"
@@ -42,7 +42,7 @@ const WineExperiencePage = () => (
             </div>     
         </section>
 
-        <section className="wine-experiencepage__tasting-and-pairings wine-experiencepage__section">
+        <section className="wine-experiencepage__tasting-and-pairings wine-experiencepage__section wrapper-width">
             <StyledHeading 
                 heading="tasting & pairings"
             />
@@ -75,7 +75,7 @@ const WineExperiencePage = () => (
             <StyledHeading 
                 heading="custom wine bottles"
             />
-            <div className="wine-experiencepage__custom-bottles__content">
+            <div className="wine-experiencepage__custom-bottles__content wrapper-width">
 
                 <div className="wine-experiencepage__custom-bottles__sec wine-experiencepage__custom-bottles__sec--1">
                     <div className="wine-experiencepage__custom-bottles__sec--text wine-experiencepage__custom-bottles__sec--1--text">
