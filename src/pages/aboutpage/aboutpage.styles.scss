@@ -76,6 +76,12 @@
 
             &--1 {
                 max-width: 40rem;
+                position: relative;
+
+                .floral-design {
+                    background-position: center 65%;
+                    background-size: contain;
+                }
 
                 @include respond(tab-land) {
                     margin-bottom: 5rem;

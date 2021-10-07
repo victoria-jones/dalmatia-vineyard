@@ -11,6 +11,7 @@
     }
 
     &__booking-form {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,9 +20,12 @@
         background-color: $color-white;
         margin: 5rem 0 15rem 0;
 
+        overflow: hidden;
+
         @include primary-box-shadow;
 
         &--wrapper {
+            position: relative;
             width: calc(100% - 3rem);
             height: calc(100% - 3rem);
             @include borderStyle(red);
@@ -31,6 +35,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            z-index: 2;
         }
 
         &__form {
@@ -39,6 +45,23 @@
 
         &__input {
             max-width: 30rem;
+        }
+
+        .vertical-design {
+            background-position: 0 59rem;
+            z-index: 1;
+            width: 200%;
+
+            @include respond(tab-port) {
+                //width: 200rem;
+                width: 100vh;
+                background-position: 0 80vw;
+            }
+
+            @include respond(phone) {
+                width: 130vh;
+                background-position: 0 50vw;
+            }
         }
     }
 }

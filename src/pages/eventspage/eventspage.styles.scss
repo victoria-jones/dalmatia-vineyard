@@ -67,6 +67,11 @@
     }
 
     &__booking {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
         &--wrapper {
             display: flex;
             flex-direction: column;

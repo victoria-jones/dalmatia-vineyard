@@ -4,6 +4,7 @@ import BackgroundImage from '../../components/background-image/background-image.
 import StyledHeading from '../../components/styled-heading/styled-heading.component';
 import PhotoGallery from '../../components/photo-gallery/photo-gallery.component'; 
 import ParagraphHeading from '../../components/paragraph-heading/paragraph-heading.component';
+import FloralDesign from '../../components/floral-design/floral-design.component';
 
 import './aboutpage.styles.scss';
 
@@ -120,17 +121,12 @@ const AboutPage = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium error ab sunt sapiente, deleniti recusandae modi similique cupiditate, veritatis ipsam, nesciunt nostrum perferendis! Ad fugit, aspernatur perferendis nisi doloremque velit.
                             </div>
                         </div>
+                        <FloralDesign />
                     </div>
 
                     <div className="aboutpage__gallery__side aboutpage__gallery__side--2">
                         <PhotoGallery images={images} />
                     </div>
-                </div>
-            </section>
-
-            <section className="aboutpage__what-dalmatia-does wrapper-width">
-                <div className="aboutpage__what-dalmatia-does--wrapper sub-section-padding">
-                    what dalmatia does area
                 </div>
             </section>
         </div>

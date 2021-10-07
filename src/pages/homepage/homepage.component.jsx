@@ -15,7 +15,7 @@ const HomePage = () => (
     <div className='homepage main-content'>
         <BackgroundImage image={backgroundImage} />
         <Hero />
-        <EventPlanning />
+        <EventPlanning button />
         <WeddingsAndEvents />
         <CustomForm 
             subheading="customize"

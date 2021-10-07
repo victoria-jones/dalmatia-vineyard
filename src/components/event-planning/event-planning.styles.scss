@@ -8,6 +8,9 @@
     background-repeat: no-repeat;
     background-position: 10rem center;
 
+    width: 100%;
+    background-color: $color-white;
+
     @include respond(tab-land) {
         background-position: 0 center;
     }

@@ -8,7 +8,7 @@ import './event-planning.styles.scss';
 
 import backgroundImageWine from '../../assets/winebottle-glasses.jpg';
 
-const EventPlanning = () => {
+const EventPlanning = ({ button }) => {
     const checkerboardTitles = [
         "catering", 
         "wine experience", 
@@ -24,7 +24,8 @@ const EventPlanning = () => {
                 backgroundImage: `url(${backgroundImageWine})`
             }}
         >
-            <div className="event-planning--wrapper wrapper-width"> 
+            <div className="event-planning--wrapper wrapper-width"
+            > 
                 <div className="event-planning__side event-planning__side--1">
                     <div className="event-planning__heading">
                         <StyledHeading
@@ -41,7 +42,12 @@ const EventPlanning = () => {
                         </p>
                     </div>
 
-                    <CustomButton red link="events" buttonClass="event-planning__button">learn more</CustomButton>
+                    {
+                        button ?
+                        <CustomButton red link="events" buttonClass="event-planning__button">learn more</CustomButton>
+                        :
+                        null
+                    }
 
                 </div>
                 

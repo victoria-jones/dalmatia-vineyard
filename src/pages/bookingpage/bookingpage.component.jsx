@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import BackgroundImage from '../../components/background-image/background-image.component';
 import StyledHeading from '../../components/styled-heading/styled-heading.component';
@@ -7,6 +6,7 @@ import CustomInput from '../../components/custom-input/custom-input.component';
 import ParagraphHeading from '../../components/paragraph-heading/paragraph-heading.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import InlineLink from '../../components/inline-link/inline-link.component';
+import FloralDesign from '../../components/floral-design/floral-design.component';
 
 import './bookingpage.styles.scss';
 
@@ -172,6 +172,8 @@ const BookingPage = () => {
                         </div>
                     </form>
                 </div> 
+                
+                <FloralDesign vertical/>
             </div>
         </div>
     );

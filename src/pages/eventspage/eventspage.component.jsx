@@ -5,6 +5,7 @@ import StyledHeading from '../../components/styled-heading/styled-heading.compon
 import DropDownSection from '../../components/drop-down-section/drop-down-section.component';
 import EventPlanning from '../../components/event-planning/event-planning.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import FloralDesign from '../../components/floral-design/floral-design.component';
 
 import './eventspage.styles.scss';
 
@@ -52,9 +53,7 @@ const EventsPage = () => {
                 </div>    
             </section>
 
-            <section className="eventspage__inclusive-event-planning wrapper-width">
-                <EventPlanning />
-            </section>
+            <EventPlanning />
 
             <section className="eventspage__types-of-events">
                 <DropDownSection 
@@ -107,8 +106,10 @@ const EventsPage = () => {
                         link="contact/booking"
                     >
                         book an event
-                    </CustomButton>
+                    </CustomButton>   
                 </div>
+
+                <FloralDesign />
             </section>
         </div>
     );
