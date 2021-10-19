@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import LionBackground from '../lion-background/lion-background.component';
+import IconLink from '../icon-link/icon-link.component';
 
 import dalmatiaSeal from '../../assets/logo/dalmatia-seal_100px.png';
 
@@ -49,6 +50,13 @@ const Footer = () => (
                     </ul>
                 </div>
             </section>
+
+            <div className="footer__social-nav">
+                <IconLink icon="facebook" link="#" />
+                <IconLink icon="instagram" link="#" />
+                <IconLink icon="twitter" link="#" />
+                <IconLink icon="youtube" link="#" />
+            </div>
         </LionBackground>
     </footer>
 );

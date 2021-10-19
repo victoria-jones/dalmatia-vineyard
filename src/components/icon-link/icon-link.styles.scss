@@ -1,0 +1,42 @@
+@import '../../sassStyles/main.scss';
+
+.icon-text-link {
+
+    transition: all .3s;
+
+    &--icon {
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &--svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-white;
+    }
+
+    &--link,
+    &--link:visited,
+    &--link:focus {
+        text-decoration: none;
+    }
+
+    &::after {
+        transition: all .3s;
+        content: "";
+        display: block;
+        width: 0rem;
+        height: 2px;
+        background-color: $color-primary-red;
+    }
+
+    &:hover {
+        transform: translateY(-1rem);
+
+        &::after {
+            width: 2.5rem;
+            transform: translateY(1rem);
+        }
+    }
+}

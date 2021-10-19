@@ -104,4 +104,11 @@
             }
         }
     }
+
+    &__social-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 25rem;
+        margin-top: 2rem;
+    }
 }

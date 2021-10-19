@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import Logo from '../logo/logo.component';
-
 import { Link, useLocation } from 'react-router-dom';
 
 import './mobile-navigation.styles.scss';
@@ -111,6 +111,7 @@ const MobileNavigation = () => {
                             </li>
                         </ul>
                     </nav>
+                    <CustomButton white link="contact/booking" buttonClass="header__button">booking</CustomButton>
                 </div>
             </div>
         </div>
