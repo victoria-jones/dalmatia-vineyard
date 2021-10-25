@@ -55,7 +55,7 @@ const Footer = () => (
                 <IconLink icon="facebook" link="#" />
                 <IconLink icon="instagram" link="#" />
                 <IconLink icon="twitter" link="#" />
-                <IconLink icon="youtube" link="#" />
+                <IconLink icon="pinterest" link="#" />
             </div>
         </LionBackground>
     </footer>

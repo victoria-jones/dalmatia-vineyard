@@ -8,6 +8,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/SVG/instagram.svg'
 import { ReactComponent as MailIcon } from '../../assets/SVG/mail.svg';
 import { ReactComponent as TwitterIcon } from '../../assets/SVG/twitter.svg';
 import { ReactComponent as YoutubeIcon } from '../../assets/SVG/youtube.svg';
+import { ReactComponent as PinterestIcon } from '../../assets/SVG/pinterest.svg';
 
 const IconLink = ({ icon, link }) => {
 
@@ -16,7 +17,8 @@ const IconLink = ({ icon, link }) => {
         'instagram': InstagramIcon,
         'email': MailIcon,
         'twitter': TwitterIcon,
-        'youtube': YoutubeIcon
+        'youtube': YoutubeIcon,
+        'pinterest': PinterestIcon
     };
 
     const Icon = socialIcon[icon];

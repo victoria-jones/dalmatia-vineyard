@@ -18,7 +18,6 @@
     &__logo-image {
         width: 10rem;
         height: 10rem;
-        //background-color: $color-primary-red;
         margin-bottom: 1rem;
     }
 
@@ -110,5 +109,9 @@
         justify-content: space-between;
         width: 25rem;
         margin-top: 2rem;
+
+        @include respond(phone) {
+            margin-top: 8rem;
+        }
     }
 }

@@ -22,6 +22,10 @@
 .wrapper-width-condensed {
     width: 100%;
     max-width: 100rem;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
 }
 
 .page-title {
@@ -32,4 +36,8 @@
 
 .page-intro-wrapper {
     max-width: 70rem;
+
+    @include respond(tab-port) {
+        max-width: 90%;
+    }
 }
