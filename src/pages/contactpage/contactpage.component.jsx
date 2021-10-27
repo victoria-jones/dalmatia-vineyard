@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import StyledHeading from '../../components/styled-heading/styled-heading.component';
 import BackgroundImage from '../../components/background-image/background-image.component';

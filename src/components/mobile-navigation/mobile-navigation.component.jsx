@@ -16,6 +16,7 @@ const MobileNavigation = () => {
     useEffect(() => {
         //set current page path
         setCurrentLocation(location.pathname);
+        console.log(currentLocation);
     }, [location]);
 
     //make updates when the page location changes
@@ -31,7 +32,7 @@ const MobileNavigation = () => {
         checkbox.checked = false;
     };
 
-    const changeMarkerLocation = () => {
+    /*const changeMarkerLocation = () => {
         //const locationMarker = document.getElementsByClassName("mobile-navigation__nav-location-marker")[0];
         if(document.querySelector(`a[href="${currentLocation}"]`)) {
             //set location and link
@@ -48,7 +49,41 @@ const MobileNavigation = () => {
             console.log(markerOffset);
             setLocationMarker(markerOffset);
         }
-    };
+    };*/
+
+    const changeMarkerLocation = () => {
+        const locationMarker = document.getElementsByClassName("mobile-navigation__nav-location__marker")[0];
+
+        //lets be lazy here and just use a switch to add 20px + to get to link location
+        switch(currentLocation) {
+            case "/" : 
+                console.log("homepage");
+                locationMarker.style.marginTop = "0px";
+                break;
+            case "/about" :
+                console.log("aboutpage");
+                locationMarker.style.marginTop = "55px";
+                break;
+            case "/events" :
+                console.log("eventspage");
+                locationMarker.style.marginTop = "110px";
+                break;
+            case "/wine_experience" :
+                console.log("wine experience page");
+                locationMarker.style.marginTop = "165px";
+                break;
+            case "/contact" :
+                console.log("contac page");
+                locationMarker.style.marginTop = "220px";
+                break;
+            case "/contact/booking" :
+                console.log("booking page");
+                locationMarker.style.marginTop = "275px";
+                break;
+            default:
+                console.log("default 'set to home'")
+        }
+    }
     
     return (
         <div className="mobile-navigation">
@@ -69,9 +104,12 @@ const MobileNavigation = () => {
 
             <div className="mobile-navigation__nav-background">
                 <div className="mobile-navigation__nav--wrapper">
-                    <div className="mobile-navigation__nav-location-marker">
-                        &#9670;
+                    <div className="mobile-navigation__nav-location">
+                        <div className="mobile-navigation__nav-location__marker">
+                            &#9670;
+                        </div>
                     </div>
+                    
                     <nav className="mobile-navigation__nav">
                         <ul className="mobile-navigation__list nav-list">
                             <li className="mobile-navigation__item">

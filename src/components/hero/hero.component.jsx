@@ -43,20 +43,20 @@ const Hero = () => {
                             <span className="hero__cta--text">
                                 host special events and weddings
                             </span>
-                            <CustomButton white link="" buttonClass="hero__button">learn more</CustomButton>
+                            <CustomButton white link="events" buttonClass="hero__button">learn more</CustomButton>
                         </div>
                     </div>
                 </Carousel>
 
                 <div className="hero__highlight hero__highlight--weddings">
                     <ImageBoxBordered backgroundImage={weddingImage}>
-                        <CustomButton white link="" buttonClass="hero__button hero__highlight-button">weddings</CustomButton>
+                        <CustomButton white link="events" buttonClass="hero__button hero__highlight-button">weddings</CustomButton>
                     </ImageBoxBordered>
                 </div>
 
                 <div className="hero__highlight hero__highlight--event-planning">
                     <ImageBoxBordered backgroundImage={eventImage}>
-                        <CustomButton white link="" buttonClass="hero__button hero__highlight-button">event planning</CustomButton>
+                        <CustomButton white link="events" buttonClass="hero__button hero__highlight-button">event planning</CustomButton>
                     </ImageBoxBordered>
                 </div>
 
