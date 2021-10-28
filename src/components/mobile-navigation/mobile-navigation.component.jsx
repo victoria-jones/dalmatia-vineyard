@@ -66,15 +66,15 @@ const MobileNavigation = () => {
                 break;
             case "/events" :
                 console.log("eventspage");
-                locationMarker.style.marginTop = "110px";
+                locationMarker.style.marginTop = "108px";
                 break;
             case "/wine_experience" :
                 console.log("wine experience page");
-                locationMarker.style.marginTop = "165px";
+                locationMarker.style.marginTop = "161px";
                 break;
             case "/contact" :
                 console.log("contac page");
-                locationMarker.style.marginTop = "220px";
+                locationMarker.style.marginTop = "214px";
                 break;
             case "/contact/booking" :
                 console.log("booking page");
